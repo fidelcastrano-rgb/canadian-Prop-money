@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Canadian Prop Money",
+  "description": "Canada\u0027s Most Trusted Realistic Currency Re-Printer",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

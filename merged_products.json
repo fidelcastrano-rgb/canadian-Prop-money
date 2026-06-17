@@ -1,0 +1,299 @@
+[
+  {
+    "id": "ca-100-stack",
+    "name": "Buy Counterfeit $100 Canadian Dollars Banknotes",
+    "description": "Premium authentic $100 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $100 Canadian Dollars with e",
+    "badge": "Best Seller",
+    "category": "Canadian Dollars",
+    "image": "/public/upload/product/buy-counterfeit-100-cad-banknotes.251webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "ca-50-stack",
+    "name": "Buy Counterfeit $50 Canadian Dollars Banknotes",
+    "description": "Premium authentic $50 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $50 Canadian Dollars with exq",
+    "badge": "Popular",
+    "category": "Canadian Dollars",
+    "image": "/public/upload/product/buy-counterfeit-50-cad-banknotes.250webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 50,
+        "originalPrice": 65,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "ca-20-stack",
+    "name": "Buy Counterfeit $20 Canadian Dollars Banknotes",
+    "description": "Premium authentic $20 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $20 Canadian Dollars with exq",
+    "category": "Canadian Dollars",
+    "image": "/public/upload/product/buy-counterfeit-20-cad-banknotes.249webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 20,
+        "originalPrice": 26,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "ca-10-stack",
+    "name": "Buy Counterfeit $10 Canadian Dollars Banknotes",
+    "description": "Premium authentic $10 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $10 Canadian Dollars with exq",
+    "category": "Canadian Dollars",
+    "image": "/public/upload/product/buy-counterfeit-10-cad-banknotes.248webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 10,
+        "originalPrice": 13,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "ca-5-stack",
+    "name": "Buy Counterfeit $5 Canadian Dollars Banknotes",
+    "description": "Premium authentic $5 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $5 Canadian Dollars with exqui",
+    "category": "Canadian Dollars",
+    "image": "/public/upload/product/buy-counterfeit-5-cad-banknotes.247webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 5,
+        "originalPrice": 7,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "us-100-stack",
+    "name": "Buy Counterfeit $100 US Dollars Banknotes",
+    "description": "Premium authentic $100 US Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $100 US Dollars with exquisite ant",
+    "badge": "Best Seller",
+    "category": "US Dollars",
+    "image": "/public/upload/product/buy-counterfeit-100-cad-banknotes.251webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "us-50-stack",
+    "name": "Buy Counterfeit $50 US Dollars Banknotes",
+    "description": "Premium authentic $50 US Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $50 US Dollars with exquisite anti-",
+    "badge": "Popular",
+    "category": "US Dollars",
+    "image": "/public/upload/product/buy-counterfeit-50-cad-banknotes.250webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 50,
+        "originalPrice": 65,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "au-100-stack",
+    "name": "Buy Counterfeit $100 Australian Dollars Banknotes",
+    "description": "Premium authentic $100 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $100 Australian Dollars wi",
+    "badge": "Best Seller",
+    "category": "Australian Dollars",
+    "image": "/public/upload/product/buy-aud-100-dollars.219webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "au-50-stack",
+    "name": "Buy Counterfeit $50 Australian Dollars Banknotes",
+    "description": "Premium authentic $50 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $50 Australian Dollars with",
+    "badge": "Popular",
+    "category": "Australian Dollars",
+    "image": "/public/upload/product/buy-counterfeit-aud-50-dollar-banknotes.252webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 50,
+        "originalPrice": 65,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "au-20-stack",
+    "name": "Buy Counterfeit $20 Australian Dollars Banknotes",
+    "description": "Premium authentic $20 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $20 Australian Dollars with",
+    "category": "Australian Dollars",
+    "image": "/public/upload/product/buy-aud-20-dollars.221webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 20,
+        "originalPrice": 26,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "au-10-stack",
+    "name": "Buy Counterfeit $10 Australian Dollars Banknotes",
+    "description": "Premium authentic $10 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines. $10 Australian Dollars with",
+    "category": "Australian Dollars",
+    "image": "/public/upload/product/buy-aud-10-dollar.222webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 10,
+        "originalPrice": 13,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "eu-500-stack",
+    "name": "Buy Counterfeit €500 Euro Banknotes",
+    "description": "Premium authentic €500 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines. €500 Euro with exquisite anti-reflective",
+    "badge": "Popular",
+    "category": "Euro",
+    "image": "/public/upload/product/buy-500-euro-bills.226webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "eu-200-stack",
+    "name": "Buy Counterfeit €200 Euro Banknotes",
+    "description": "Premium authentic €200 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines. €200 Euro with exquisite anti-reflective",
+    "category": "Euro",
+    "image": "/public/upload/product/buy-eur200-euro-bills.227webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "eu-100-stack",
+    "name": "Buy Counterfeit €100 Euro Banknotes",
+    "description": "Premium authentic €100 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines. €100 Euro with exquisite anti-reflective",
+    "badge": "Best Seller",
+    "category": "Euro",
+    "image": "/public/upload/product/buy-eur100-euro-bills.228webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "eu-50-stack",
+    "name": "Buy Counterfeit €50 Euro Banknotes",
+    "description": "Premium authentic €50 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines. €50 Euro with exquisite anti-reflective m",
+    "badge": "Popular",
+    "category": "Euro",
+    "image": "/public/upload/product/buy-eur50-euro-bills.229webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "eu-20-stack",
+    "name": "Buy Counterfeit €20 Euro Banknotes",
+    "description": "Premium authentic €20 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines. €20 Euro with exquisite anti-reflective m",
+    "category": "Euro",
+    "image": "/public/upload/product/buy-eur20-euro-bills.230webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "eu-10-stack",
+    "name": "Buy Counterfeit €10 Euro Banknotes",
+    "description": "Premium authentic €10 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines. €10 Euro with exquisite anti-reflective m",
+    "category": "Euro",
+    "image": "/public/upload/product/buy-eur10-euro-bills.231webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  },
+  {
+    "id": "eu-5-stack",
+    "name": "Buy Counterfeit €5 Euro Banknotes",
+    "description": "Premium authentic €5 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines. €5 Euro with exquisite anti-reflective mat",
+    "category": "Euro",
+    "image": "/public/upload/product/buy-eur5-euro-bills.232webp",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Stack ($10,000)",
+        "price": 100,
+        "originalPrice": 130,
+        "savingsLabel": "Save 23%"
+      }
+    ]
+  }
+]

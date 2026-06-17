@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #dc2626;
+  --color-secondary: #991b1b;
+  --color-accent: #7f1d1d;
+  --color-gold: #d97706;
+  --color-background: #0a0a0a;
+  --color-text: #e5e7eb;
+  --color-whatsapp: #25D366;
+  --color-btn-primary: #ffffff;
+  --color-btn-primary-text: #000000;
+
+  --font-syne: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-dm-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 25s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+}

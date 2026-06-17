@@ -1,0 +1,1215 @@
+[
+  {
+    "id": "ca-100-stack",
+    "slug": "ca-100-stack",
+    "name": "Buy Counterfeit $100 Canadian Dollars Banknotes",
+    "tagline": "Premium authentic $100 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Canadian Dollars",
+    "badge": "New Production",
+    "rating": 4.8,
+    "reviewCount": 56,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-amber-500/10 to-yellow-600/15 text-amber-400 border-amber-500/20",
+    "stripeColor": "#D4AF37",
+    "bannerColor": "bg-amber-600/10 border-amber-500/30 text-amber-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-100-cad-banknotes.251webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-100-cad-banknotes.251webp"
+    ],
+    "description": "$100 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $5,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $10,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $25,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $50,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $100,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $250,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "ca-50-stack",
+    "slug": "ca-50-stack",
+    "name": "Buy Counterfeit $50 Canadian Dollars Banknotes",
+    "tagline": "Premium authentic $50 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Canadian Dollars",
+    "rating": 4.8,
+    "reviewCount": 42,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-rose-500/10 to-red-600/15 text-rose-400 border-rose-500/20",
+    "stripeColor": "#C0397B",
+    "bannerColor": "bg-rose-600/10 border-rose-500/30 text-rose-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-50-cad-banknotes.250webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-50-cad-banknotes.250webp"
+    ],
+    "description": "$50 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $2,500 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $5,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $12,500 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $25,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $50,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $125,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "ca-20-stack",
+    "slug": "ca-20-stack",
+    "name": "Buy Counterfeit $20 Canadian Dollars Banknotes",
+    "tagline": "Premium authentic $20 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Canadian Dollars",
+    "badge": "Best Seller",
+    "rating": 4.8,
+    "reviewCount": 69,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-emerald-500/10 to-teal-500/15 text-emerald-400 border-emerald-500/20",
+    "stripeColor": "#6A8E4E",
+    "bannerColor": "bg-emerald-600/10 border-emerald-500/30 text-emerald-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-20-cad-banknotes.249webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-20-cad-banknotes.249webp"
+    ],
+    "description": "$20 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $1,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $2,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $5,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $10,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $20,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $50,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "ca-10-stack",
+    "slug": "ca-10-stack",
+    "name": "Buy Counterfeit $10 Canadian Dollars Banknotes",
+    "tagline": "Premium authentic $10 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Canadian Dollars",
+    "rating": 4.8,
+    "reviewCount": 47,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-violet-500/10 to-purple-500/15 text-purple-400 border-purple-500/20",
+    "stripeColor": "#8B5CF6",
+    "bannerColor": "bg-purple-600/10 border-purple-500/30 text-purple-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-10-cad-banknotes.248webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-10-cad-banknotes.248webp"
+    ],
+    "description": "$10 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $500 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $1,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $2,500 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $5,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $10,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $25,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "ca-5-stack",
+    "slug": "ca-5-stack",
+    "name": "Buy Counterfeit $5 Canadian Dollars Banknotes",
+    "tagline": "Premium authentic $5 Canadian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Canadian Dollars",
+    "rating": 4.8,
+    "reviewCount": 63,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-blue-500/10 to-indigo-600/15 text-blue-400 border-blue-500/20",
+    "stripeColor": "#2E5FA8",
+    "bannerColor": "bg-blue-600/10 border-blue-500/30 text-blue-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-5-cad-banknotes.247webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-5-cad-banknotes.247webp"
+    ],
+    "description": "$5 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $250 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $500 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $1,250 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $2,500 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $5,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $12,500 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "us-100-stack",
+    "slug": "us-100-stack",
+    "name": "Buy Counterfeit $100 US Dollars Banknotes",
+    "tagline": "Premium authentic $100 US Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "US Dollars",
+    "badge": "New Production",
+    "rating": 4.8,
+    "reviewCount": 41,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-amber-500/10 to-yellow-600/15 text-amber-400 border-amber-500/20",
+    "stripeColor": "#D4AF37",
+    "bannerColor": "bg-amber-600/10 border-amber-500/30 text-amber-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-100-cad-banknotes.251webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-100-cad-banknotes.251webp"
+    ],
+    "description": "$100 US Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $5,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $10,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $25,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $50,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $100,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $250,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "us-50-stack",
+    "slug": "us-50-stack",
+    "name": "Buy Counterfeit $50 US Dollars Banknotes",
+    "tagline": "Premium authentic $50 US Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "US Dollars",
+    "rating": 4.8,
+    "reviewCount": 71,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-rose-500/10 to-red-600/15 text-rose-400 border-rose-500/20",
+    "stripeColor": "#C0397B",
+    "bannerColor": "bg-rose-600/10 border-rose-500/30 text-rose-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-50-cad-banknotes.250webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-50-cad-banknotes.250webp"
+    ],
+    "description": "$50 US Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $2,500 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $5,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $12,500 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $25,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $50,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $125,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "au-100-stack",
+    "slug": "au-100-stack",
+    "name": "Buy Counterfeit $100 Australian Dollars Banknotes",
+    "tagline": "Premium authentic $100 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Australian Dollars",
+    "badge": "New Production",
+    "rating": 4.8,
+    "reviewCount": 31,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-amber-500/10 to-yellow-600/15 text-amber-400 border-amber-500/20",
+    "stripeColor": "#D4AF37",
+    "bannerColor": "bg-amber-600/10 border-amber-500/30 text-amber-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-aud-100-dollars.219webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-aud-100-dollars.219webp"
+    ],
+    "description": "$100 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $5,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $10,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $25,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $50,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $100,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $250,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "au-50-stack",
+    "slug": "au-50-stack",
+    "name": "Buy Counterfeit $50 Australian Dollars Banknotes",
+    "tagline": "Premium authentic $50 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Australian Dollars",
+    "rating": 4.8,
+    "reviewCount": 40,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-rose-500/10 to-red-600/15 text-rose-400 border-rose-500/20",
+    "stripeColor": "#C0397B",
+    "bannerColor": "bg-rose-600/10 border-rose-500/30 text-rose-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-aud-50-dollar-banknotes.252webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-counterfeit-aud-50-dollar-banknotes.252webp"
+    ],
+    "description": "$50 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $2,500 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $5,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $12,500 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $25,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $50,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $125,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "au-20-stack",
+    "slug": "au-20-stack",
+    "name": "Buy Counterfeit $20 Australian Dollars Banknotes",
+    "tagline": "Premium authentic $20 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Australian Dollars",
+    "badge": "Best Seller",
+    "rating": 4.8,
+    "reviewCount": 55,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-emerald-500/10 to-teal-500/15 text-emerald-400 border-emerald-500/20",
+    "stripeColor": "#6A8E4E",
+    "bannerColor": "bg-emerald-600/10 border-emerald-500/30 text-emerald-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-aud-20-dollars.221webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-aud-20-dollars.221webp"
+    ],
+    "description": "$20 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $1,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $2,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $5,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $10,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $20,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $50,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "au-10-stack",
+    "slug": "au-10-stack",
+    "name": "Buy Counterfeit $10 Australian Dollars Banknotes",
+    "tagline": "Premium authentic $10 Australian Dollars. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Australian Dollars",
+    "rating": 4.8,
+    "reviewCount": 72,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-violet-500/10 to-purple-500/15 text-purple-400 border-purple-500/20",
+    "stripeColor": "#8B5CF6",
+    "bannerColor": "bg-purple-600/10 border-purple-500/30 text-purple-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-aud-10-dollar.222webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-aud-10-dollar.222webp"
+    ],
+    "description": "$10 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - $500 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - $1,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - $2,500 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - $5,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - $10,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - $25,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "eu-500-stack",
+    "slug": "eu-500-stack",
+    "name": "Buy Counterfeit €500 Euro Banknotes",
+    "tagline": "Premium authentic €500 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Euro",
+    "rating": 4.8,
+    "reviewCount": 64,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-emerald-500/10 to-teal-500/15 text-emerald-400 border-emerald-500/20",
+    "stripeColor": "#6A8E4E",
+    "bannerColor": "bg-emerald-600/10 border-emerald-500/30 text-emerald-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-500-euro-bills.226webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-500-euro-bills.226webp"
+    ],
+    "description": "€500 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - €25,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - €50,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - €125,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - €250,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - €500,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - €1,250,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "eu-200-stack",
+    "slug": "eu-200-stack",
+    "name": "Buy Counterfeit €200 Euro Banknotes",
+    "tagline": "Premium authentic €200 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Euro",
+    "rating": 4.8,
+    "reviewCount": 72,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-emerald-500/10 to-teal-500/15 text-emerald-400 border-emerald-500/20",
+    "stripeColor": "#6A8E4E",
+    "bannerColor": "bg-emerald-600/10 border-emerald-500/30 text-emerald-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur200-euro-bills.227webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur200-euro-bills.227webp"
+    ],
+    "description": "€200 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - €10,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - €20,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - €50,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - €100,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - €200,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - €500,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "eu-100-stack",
+    "slug": "eu-100-stack",
+    "name": "Buy Counterfeit €100 Euro Banknotes",
+    "tagline": "Premium authentic €100 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Euro",
+    "badge": "New Production",
+    "rating": 4.8,
+    "reviewCount": 69,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-amber-500/10 to-yellow-600/15 text-amber-400 border-amber-500/20",
+    "stripeColor": "#D4AF37",
+    "bannerColor": "bg-amber-600/10 border-amber-500/30 text-amber-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur100-euro-bills.228webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur100-euro-bills.228webp"
+    ],
+    "description": "€100 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - €5,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - €10,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - €25,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - €50,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - €100,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - €250,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "eu-50-stack",
+    "slug": "eu-50-stack",
+    "name": "Buy Counterfeit €50 Euro Banknotes",
+    "tagline": "Premium authentic €50 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Euro",
+    "rating": 4.8,
+    "reviewCount": 65,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-rose-500/10 to-red-600/15 text-rose-400 border-rose-500/20",
+    "stripeColor": "#C0397B",
+    "bannerColor": "bg-rose-600/10 border-rose-500/30 text-rose-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur50-euro-bills.229webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur50-euro-bills.229webp"
+    ],
+    "description": "€50 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - €2,500 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - €5,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - €12,500 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - €25,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - €50,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - €125,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "eu-20-stack",
+    "slug": "eu-20-stack",
+    "name": "Buy Counterfeit €20 Euro Banknotes",
+    "tagline": "Premium authentic €20 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Euro",
+    "badge": "Best Seller",
+    "rating": 4.8,
+    "reviewCount": 39,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-emerald-500/10 to-teal-500/15 text-emerald-400 border-emerald-500/20",
+    "stripeColor": "#6A8E4E",
+    "bannerColor": "bg-emerald-600/10 border-emerald-500/30 text-emerald-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur20-euro-bills.230webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur20-euro-bills.230webp"
+    ],
+    "description": "€20 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - €1,000 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - €2,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - €5,000 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - €10,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - €20,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - €50,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "eu-10-stack",
+    "slug": "eu-10-stack",
+    "name": "Buy Counterfeit €10 Euro Banknotes",
+    "tagline": "Premium authentic €10 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Euro",
+    "rating": 4.8,
+    "reviewCount": 66,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-violet-500/10 to-purple-500/15 text-purple-400 border-purple-500/20",
+    "stripeColor": "#8B5CF6",
+    "bannerColor": "bg-purple-600/10 border-purple-500/30 text-purple-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur10-euro-bills.231webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur10-euro-bills.231webp"
+    ],
+    "description": "€10 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - €500 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - €1,000 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - €2,500 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - €5,000 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - €10,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - €25,000 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  },
+  {
+    "id": "eu-5-stack",
+    "slug": "eu-5-stack",
+    "name": "Buy Counterfeit €5 Euro Banknotes",
+    "tagline": "Premium authentic €5 Euro. Engineered for extreme close-ups on production film grids under motion picture guidelines.",
+    "category": "Euro",
+    "rating": 4.8,
+    "reviewCount": 37,
+    "basePrice": 200,
+    "originalPrice": 300,
+    "colorTheme": "from-blue-500/10 to-indigo-600/15 text-blue-400 border-blue-500/20",
+    "stripeColor": "#2E5FA8",
+    "bannerColor": "bg-blue-600/10 border-blue-500/30 text-blue-400",
+    "imageSet": [
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur5-euro-bills.232webp",
+      "https://propcounterfeitnotes.com/public/upload/product/buy-eur5-euro-bills.232webp"
+    ],
+    "description": "€5 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "variants": [
+      {
+        "name": "Starter Bundle (50 Notes - €250 Face Value)",
+        "price": 200,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "name": "Compact Bundle (100 Notes - €500 Face Value)",
+        "price": 400,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "name": "Premium Bundle (250 Notes - €1,250 Face Value)",
+        "price": 1000,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "name": "Production Bundle (500 Notes - €2,500 Face Value)",
+        "price": 2000,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "name": "Studio Vault Pack (1,000 Notes - €5,000 Face Value)",
+        "price": 4000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "name": "Director Platinum Pack (2,500 Notes - €12,500 Face Value)",
+        "price": 10000,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ],
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "supplyChain": "Reproduction plates prepared at local imaging workshops. Synthetic fibers sourced domestically."
+  }
+]
