@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { 
   Package, Search, ShieldAlert, CheckCircle, RefreshCw, Trash2, 
-  Mail, Settings, DollarSign, Filter, ChevronDown, Check, X, AlertTriangle, Info 
+  Mail, Settings, DollarSign, Filter, ChevronDown, Check, X, AlertTriangle, Info,
+  Send, History, Shield, Lock
 } from 'lucide-react';
 
 interface Customer {
@@ -45,6 +46,11 @@ interface Order {
   items: OrderItem[];
   history: StatusHistory[];
   email_logs: any[];
+  payment_instructions?: string | null;
+  email_history?: string | null;
+  email_sent_at?: string | null;
+  last_email_subject?: string | null;
+  payment_deadline?: string | null;
 }
 
 interface PaymentMethod {
@@ -70,11 +76,75 @@ export default function AdminDashboardPage() {
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
+  // Individual order payment instructions editing state
+  const [editingOrdersInstructions, setEditingOrdersInstructions] = useState<{ [orderId: string]: string }>({});
+  const [editingSubjects, setEditingSubjects] = useState<{ [orderId: string]: string }>({});
+  const [editingPaymentMethods, setEditingPaymentMethods] = useState<{ [orderId: string]: string }>({});
+  const [editingPaymentDeadlines, setEditingPaymentDeadlines] = useState<{ [orderId: string]: string }>({});
+
   // Reload trigger
   const [refreshCount, setRefreshCount] = useState(0);
 
+  // Authentication states
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+  const [typedCode, setTypedCode] = useState('');
+  const [checkingAuth, setCheckingAuth] = useState(false);
+  const [loginError, setLoginError] = useState('');
+
+  // Validate admin token
+  useEffect(() => {
+    const savedToken = sessionStorage.getItem('cpm_admin_passcode');
+    if (savedToken) {
+      const checkToken = async () => {
+        try {
+          const res = await fetch('/api/admin/auth', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code: savedToken })
+          });
+          if (res.ok) {
+            setIsAuthenticated(true);
+          } else {
+            sessionStorage.removeItem('cpm_admin_passcode');
+            setIsAuthenticated(false);
+          }
+        } catch {
+          setIsAuthenticated(false);
+        }
+      };
+      checkToken();
+    } else {
+      setIsAuthenticated(false);
+    }
+  }, []);
+
+  const handleLoginSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setCheckingAuth(true);
+    setLoginError('');
+    try {
+      const res = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: typedCode })
+      });
+      if (res.ok) {
+        sessionStorage.setItem('cpm_admin_passcode', typedCode);
+        setIsAuthenticated(true);
+      } else {
+        const d = await res.json();
+        setLoginError(d.message || 'Invalid passcode credential.');
+      }
+    } catch {
+      setLoginError('Authentication service unreachable.');
+    } finally {
+      setCheckingAuth(false);
+    }
+  };
+
   // Load orders and payment methods
   useEffect(() => {
+    if (isAuthenticated !== true) return;
     async function fetchAdminData() {
       setLoading(true);
       try {
@@ -104,7 +174,7 @@ export default function AdminDashboardPage() {
       }
     }
     fetchAdminData();
-  }, [searchQuery, statusFilter, refreshCount]);
+  }, [searchQuery, statusFilter, refreshCount, isAuthenticated]);
 
   const triggerNotify = (text: string, isError = false) => {
     if (isError) {
@@ -164,6 +234,68 @@ export default function AdminDashboardPage() {
     } catch (err) {
       console.error(err);
       triggerNotify('Network error re-sending dispatch email', true);
+    }
+  };
+
+  // Action: Save all customized parameters inside D1 database on request
+  const handleSaveAllValues = async (orderId: string, instructions: string, paymentMethod: string, paymentDeadline: string) => {
+    try {
+      const res = await fetch('/api/admin/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'save_all_payment_fields',
+          orderId,
+          paymentInstructions: instructions,
+          paymentMethod,
+          paymentDeadline
+        })
+      });
+
+      if (res.ok) {
+        triggerNotify('All customized transaction settings saved in D1 ledger.');
+        setRefreshCount(prev => prev + 1);
+      } else {
+        triggerNotify('Failed to save customized parameters.', true);
+      }
+    } catch (err) {
+      console.error(err);
+      triggerNotify('Network error saving customized variables.', true);
+    }
+  };
+
+  // Action: Send or Resend payment instructions email via Resend
+  const handleSendPaymentInstructions = async (
+    orderId: string, 
+    instructions: string, 
+    subject: string, 
+    paymentMethod: string, 
+    paymentDeadline: string
+  ) => {
+    try {
+      const res = await fetch('/api/admin/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'send_payment_instructions',
+          orderId,
+          paymentInstructions: instructions,
+          subject,
+          paymentMethod,
+          paymentDeadline
+        })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        triggerNotify(data.message || 'Payment instructions emailed.');
+        setRefreshCount(prev => prev + 1);
+      } else {
+        triggerNotify('Failed to dispatch payment instructions.', true);
+      }
+    } catch (err) {
+      console.error(err);
+      triggerNotify('Network error emailing payment instructions.', true);
     }
   };
 
@@ -252,6 +384,83 @@ export default function AdminDashboardPage() {
   const dispatchCompleted = orders.filter(o => o.status === 'Completed').length;
   const avgOrderValue = orders.length > 0 ? totalRevenue / orders.filter(o => o.status !== 'Cancelled').length : 0;
 
+  // 1. Loader screen during initial auth validation
+  if (isAuthenticated === null) {
+    return (
+      <div className="bg-[#070708] min-h-screen text-white flex flex-col justify-center items-center font-sans">
+        <div className="space-y-4 text-center">
+          <div className="w-12 h-12 rounded-full border-t-2 border-primary border-r-2 animate-spin mx-auto" />
+          <p className="text-[10px] uppercase font-mono tracking-widest text-gray-500 font-bold">Verifying admin cryptkey...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Cinematic Admin Credentials verification screen
+  if (isAuthenticated === false) {
+    return (
+      <div className="bg-[#070708] min-h-screen text-white flex flex-col justify-center items-center px-4 sm:px-6 font-sans relative overflow-hidden">
+        {/* Decorative background grid subtle overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f1f23_1px,transparent_1px),linear-gradient(to_bottom,#1f1f23_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+        
+        <div className="max-w-md w-full relative z-10 space-y-8">
+          <div className="text-center space-y-4">
+            <div className="inline-flex p-4 rounded-full bg-primary/5 border border-primary/20 text-primary shadow-[0_0_15px_rgba(234,179,8,0.05)] mx-auto">
+              <Lock className="w-8 h-8 text-primary animate-pulse" />
+            </div>
+            
+            <div className="space-y-1">
+              <h1 className="text-2xl font-light text-white tracking-widest uppercase">
+                SYSTEM <span className="text-primary font-bold">CONTROL</span> PORTAL
+              </h1>
+              <p className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">
+                Canadian Prop Money Dispatch Ledger Vault
+              </p>
+            </div>
+          </div>
+
+          <form onSubmit={handleLoginSubmit} className="bg-[#0f0f12] border border-white/5 p-6 sm:p-8 rounded-2xl shadow-2xl space-y-6">
+            <div className="space-y-2">
+              <label className="block text-[10px] uppercase font-mono text-gray-400 font-bold tracking-wider">
+                ACCESS PASSCODE CREDENTIAL
+              </label>
+              <input
+                type="password"
+                placeholder="••••••••••••••"
+                value={typedCode}
+                onChange={(e) => setTypedCode(e.target.value)}
+                className="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white font-mono text-center tracking-widest focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                autoFocus
+              />
+            </div>
+
+            {loginError && (
+              <div className="bg-red-950/20 border border-red-500/20 text-red-200 p-3.5 rounded-xl text-[11px] font-mono uppercase text-center tracking-wide leading-relaxed">
+                ⚠️ {loginError}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={checkingAuth || !typedCode}
+              className="w-full py-3.5 bg-primary hover:bg-opacity-90 disabled:opacity-50 text-black text-xs font-bold uppercase tracking-widest rounded-xl transition-all shadow-[0_4px_20px_rgba(234,179,8,0.15)] flex justify-center items-center gap-2"
+            >
+              {checkingAuth ? (
+                <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+              ) : (
+                'VERIFY IDENTITY'
+              )}
+            </button>
+          </form>
+
+          <p className="text-[9px] text-gray-600 text-center uppercase tracking-wider font-mono">
+            AUTHORIZED SECURE ENTRY ONLY. INTRUSION TRACKED & LOGGED.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-[#070708] min-h-screen text-white py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-10">
@@ -280,12 +489,23 @@ export default function AdminDashboardPage() {
             <h1 className="text-4xl font-light text-white uppercase tracking-tight">Locker Dispatch Administration</h1>
             <p className="text-sm text-gray-400 font-light mt-1">Real-time orders processing database built on Cloudflare D1 tables ledger.</p>
           </div>
-          <button 
-            onClick={() => setRefreshCount(prev => prev + 1)}
-            className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 hover:text-white bg-white/5 border border-white/10 px-4 py-2.5 rounded hover:bg-white/10 transition-colors font-semibold"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 text-primary ${loading ? 'animate-spin' : ''}`} /> Force Refresh
-          </button>
+          <div className="flex flex-wrap gap-2">
+            <button 
+              onClick={() => setRefreshCount(prev => prev + 1)}
+              className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 hover:text-white bg-white/5 border border-white/10 px-4 py-2.5 rounded hover:bg-white/10 transition-colors font-semibold"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 text-primary ${loading ? 'animate-spin' : ''}`} /> Force Refresh
+            </button>
+            <button 
+              onClick={() => {
+                sessionStorage.removeItem('cpm_admin_passcode');
+                setIsAuthenticated(false);
+              }}
+              className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#f87171] hover:text-[#fca5a5] bg-[#7f1d1d]/20 border border-[#f87171]/20 px-4 py-2.5 rounded hover:bg-[#7f1d1d]/30 transition-colors font-semibold shadow-[0_0_15px_rgba(239,68,68,0.05)]"
+            >
+              Exit Console
+            </button>
+          </div>
         </div>
 
         {/* METRICS DASHBOARD PANELS */}
@@ -530,6 +750,253 @@ export default function AdminDashboardPage() {
                       <p className="text-gray-500">Shipping: ${order.shipping?.toFixed(2)}</p>
                       <p className="text-emerald-400 text-sm font-bold pt-1 border-t border-white/5 mt-1">Total: ${order.total?.toFixed(2)} CAD</p>
                       <p className="text-[10px] text-gray-400 uppercase tracking-wider pt-0.5">Pay: <span className="text-white font-bold">{order.payment_method}</span></p>
+                    </div>
+
+                  </div>
+
+                  {/* ADMIN WORKFLOW PANEL: Payment Instructions Editor & Email Logs History */}
+                  <div className="mt-4 border-t border-white/5 pt-4 grid grid-cols-1 md:grid-cols-12 gap-6 bg-white/[0.02] p-4 sm:p-5 rounded-xl border border-white/5">
+                    
+                    {/* Column Left: Textarea Editor & Parameters UI Form */}
+                    <div className="md:col-span-7 space-y-4">
+                      <div className="flex justify-between items-center pb-2 border-b border-white/5">
+                        <span className="text-[10px] uppercase font-bold text-gray-400 tracking-wider flex items-center gap-1.5 font-mono">
+                          <Settings className="w-3.5 h-3.5 text-primary" /> PAYMENT INSTRUCTIONS CONTROL BOARD
+                        </span>
+                        {/* Auto-fill indicator */}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const currentMethodName = editingPaymentMethods[order.id] || order.payment_method;
+                            const defaultVal = paymentMethods.find(pm => pm.id === currentMethodName || pm.name === currentMethodName || pm.id === order.payment_method || pm.name === order.payment_method)?.instructions || "";
+                            setEditingOrdersInstructions(prev => ({
+                              ...prev,
+                              [order.id]: defaultVal
+                            }));
+                            triggerNotify('Reset instructions to method defaults.');
+                          }}
+                          className="text-[9px] uppercase font-mono font-bold text-primary hover:underline"
+                        >
+                          Reset to Method Defaults
+                        </button>
+                      </div>
+
+                      {/* Overrides Selection Fields */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {/* Dynamic Payment Method Selector */}
+                        <div className="space-y-1">
+                          <label className="block text-[9px] uppercase font-mono text-gray-400 font-bold">Select/Override Method:</label>
+                          <select
+                            value={editingPaymentMethods[order.id] !== undefined ? editingPaymentMethods[order.id] : order.payment_method}
+                            onChange={(e) => {
+                              const selectedMethod = e.target.value;
+                              setEditingPaymentMethods(prev => ({ ...prev, [order.id]: selectedMethod }));
+                              
+                              // Automatically auto-fill the instructions textarea with the chosen payment method's template defaults 
+                              const pm = paymentMethods.find(p => p.name === selectedMethod || p.id === selectedMethod);
+                              if (pm) {
+                                setEditingOrdersInstructions(prev => ({ ...prev, [order.id]: pm.instructions }));
+                              }
+                            }}
+                            className="w-full bg-black/60 border border-white/10 rounded-lg p-2 text-xs text-white uppercase font-bold font-mono focus:outline-none focus:border-primary cursor-pointer"
+                          >
+                            {paymentMethods.map((pm) => (
+                              <option key={pm.id} value={pm.name}>
+                                {pm.name} {pm.enabled === 0 ? "(INACTIVE)" : ""}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+
+                        {/* Optional Payment Deadline Input */}
+                        <div className="space-y-1">
+                          <label className="block text-[9px] uppercase font-mono text-gray-400 font-bold">Optional Deadline:</label>
+                          <input
+                            type="text"
+                            value={editingPaymentDeadlines[order.id] !== undefined ? editingPaymentDeadlines[order.id] : (order.payment_deadline || '')}
+                            onChange={(e) => {
+                              setEditingPaymentDeadlines(prev => ({ ...prev, [order.id]: e.target.value }));
+                            }}
+                            placeholder="e.g. Within 24 Hours, immediate, June 20"
+                            className="w-full bg-black/60 border border-white/10 rounded-lg p-2 text-xs text-white font-mono focus:outline-none focus:border-primary"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Subject Choice UI Block */}
+                      <div className="space-y-1">
+                        <label className="block text-[9px] uppercase font-mono text-gray-400 font-bold">Customizable Subject Line:</label>
+                        <div className="flex flex-col sm:flex-row gap-2">
+                          <select
+                            onChange={(e) => {
+                              const choice = e.target.value;
+                              if (choice !== "custom") {
+                                const formatted = choice.replace(/\[ORDER_NUMBER\]/g, order.order_number);
+                                setEditingSubjects(prev => ({ ...prev, [order.id]: formatted }));
+                              }
+                            }}
+                            className="bg-black/60 border border-white/10 rounded-lg p-2 text-xs text-white font-mono focus:outline-none focus:border-primary sm:max-w-[180px] w-full"
+                          >
+                            <option value={`Payment Required - Order #${order.order_number}`}>Default: Required</option>
+                            <option value={`Payment Instructions For Order #${order.order_number}`}>Alternative 1: Details</option>
+                            <option value={`Action Required: Payment For Order #${order.order_number}`}>Alternative 2: Action</option>
+                            <option value="custom">-- Completely Custom --</option>
+                          </select>
+
+                          <input
+                            type="text"
+                            value={
+                              editingSubjects[order.id] !== undefined
+                                ? editingSubjects[order.id]
+                                : `Payment Required - Order #${order.order_number}`
+                            }
+                            onChange={(e) => {
+                              setEditingSubjects(prev => ({ ...prev, [order.id]: e.target.value }));
+                            }}
+                            placeholder="Type a completely custom email subject..."
+                            className="flex-1 bg-black/60 border border-white/10 rounded-lg p-2 text-xs text-white font-mono focus:outline-none focus:border-primary"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Textarea instruction details */}
+                      <div className="space-y-1">
+                        <label className="block text-[9px] uppercase font-mono text-gray-400 font-bold">Secure Payment Specifications Details:</label>
+                        <textarea
+                          value={
+                            editingOrdersInstructions[order.id] !== undefined
+                              ? editingOrdersInstructions[order.id]
+                              : (order.payment_instructions || paymentMethods.find(pm => pm.id === order.payment_method || pm.name === order.payment_method)?.instructions || "")
+                          }
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            setEditingOrdersInstructions(prev => ({
+                              ...prev,
+                              [order.id]: val
+                            }));
+                          }}
+                          placeholder="Type address hashes, wallet codes, Bank Wire credentials precisely (breaks are preserved)..."
+                          className="w-full bg-black/60 text-xs p-3 border border-white/10 text-white rounded-lg font-mono focus:outline-none focus:border-primary"
+                          rows={4}
+                        />
+                      </div>
+
+                      {/* Operation action dispatch line */}
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const currentInstructions = editingOrdersInstructions[order.id] !== undefined
+                              ? editingOrdersInstructions[order.id]
+                              : (order.payment_instructions || paymentMethods.find(pm => pm.id === order.payment_method || pm.name === order.payment_method)?.instructions || "");
+                            
+                            const currentMethod = editingPaymentMethods[order.id] !== undefined ? editingPaymentMethods[order.id] : order.payment_method;
+                            const currentDeadline = editingPaymentDeadlines[order.id] !== undefined ? editingPaymentDeadlines[order.id] : (order.payment_deadline || '');
+                            
+                            handleSaveAllValues(order.id, currentInstructions, currentMethod, currentDeadline);
+                          }}
+                          className="py-1.5 px-3 bg-white/5 hover:bg-white/10 border border-white/10 text-[9px] font-bold uppercase tracking-wider rounded text-gray-300 hover:text-white flex items-center gap-1.5 transition"
+                        >
+                          <Check className="w-3.5 h-3.5 text-emerald-400" /> Save Draft (D1 Only)
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const currentInstructions = editingOrdersInstructions[order.id] !== undefined
+                              ? editingOrdersInstructions[order.id]
+                              : (order.payment_instructions || paymentMethods.find(pm => pm.id === order.payment_method || pm.name === order.payment_method)?.instructions || "");
+                            
+                            const currentSubject = editingSubjects[order.id] !== undefined
+                              ? editingSubjects[order.id]
+                              : `Payment Required - Order #${order.order_number}`;
+
+                            const currentMethod = editingPaymentMethods[order.id] !== undefined ? editingPaymentMethods[order.id] : order.payment_method;
+                            const currentDeadline = editingPaymentDeadlines[order.id] !== undefined ? editingPaymentDeadlines[order.id] : (order.payment_deadline || '');
+
+                            handleSendPaymentInstructions(order.id, currentInstructions, currentSubject, currentMethod, currentDeadline);
+                          }}
+                          className="py-1.5 px-4 bg-primary text-black hover:bg-opacity-90 text-[9px] font-bold uppercase tracking-wider rounded flex items-center gap-1.5 transition shadow"
+                        >
+                          <Mail className="w-3.5 h-3.5" /> 
+                          {order.email_sent_at ? "Resend Payment Details" : "Send Payment Details"}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Column Right: Email History Logs */}
+                    <div className="md:col-span-5 space-y-3">
+                      <span className="text-[10px] uppercase font-bold text-gray-400 tracking-wider flex items-center gap-1.5 font-mono">
+                        <History className="w-3.5 h-3.5 text-gray-400" /> EMAIL HISTORY LEDGER
+                      </span>
+
+                      <div className="bg-black/40 border border-white/5 rounded-lg p-3.5 space-y-3.5 overflow-hidden">
+                        {/* Sent stats metadata */}
+                        <div className="grid grid-cols-2 gap-2 text-[9px] font-mono border-b border-white/5 pb-2">
+                          <div>
+                            <span className="text-gray-500 block uppercase font-bold">LAST DISPATCH AT:</span>
+                            <span className="text-white truncate block max-w-full">{order.email_sent_at ? new Date(order.email_sent_at).toLocaleString() : "NEVER SENT"}</span>
+                          </div>
+                          <div>
+                            <span className="text-gray-500 block uppercase font-bold">LAST SUBJECT:</span>
+                            <span className="text-white truncate block max-w-full" title={order.last_email_subject || ""}>
+                              {order.last_email_subject || "N/A"}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Logs list */}
+                        <div className="space-y-2 max-h-[220px] overflow-y-auto pr-1">
+                          {(() => {
+                            const parsedHistory: any[] = [];
+                            try {
+                              if (order.email_history) {
+                                parsedHistory.push(...JSON.parse(order.email_history));
+                              }
+                            } catch (e) {}
+
+                            // Also sync any other email logs
+                            if (order.email_logs && order.email_logs.length > 0) {
+                              order.email_logs.forEach((log: any) => {
+                                const exists = parsedHistory.some((h: any) => h.subject.toLowerCase().includes(log.email_type.toLowerCase()) || h.created_at === log.created_at);
+                                if (!exists) {
+                                  parsedHistory.push({
+                                    created_at: log.created_at,
+                                    subject: log.email_type.replace(/_/g, ' ').toUpperCase(),
+                                    recipient: log.recipient,
+                                    status: log.status
+                                  });
+                                }
+                              });
+                            }
+
+                            // Sort latest first
+                            parsedHistory.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+
+                            if (parsedHistory.length === 0) {
+                              return <p className="text-[10px] text-gray-500 font-mono italic">No automated or manual emails logged for this transaction yet.</p>;
+                            }
+
+                            return parsedHistory.map((item: any, idx: number) => (
+                              <div key={idx} className="flex justify-between items-start text-[9px] font-mono bg-black/60 p-2 rounded border border-white/5 gap-2">
+                                <div className="space-y-0.5 truncate flex-1">
+                                  <span className="text-gray-400 block truncate font-bold uppercase">{item.subject}</span>
+                                  <span className="text-gray-500 block truncate">to: {item.recipient}</span>
+                                  {item.payment_method && (
+                                    <span className="text-amber-500 block text-[8px] uppercase font-bold">Method: {item.payment_method}</span>
+                                  )}
+                                  <span className="text-[8px] text-gray-600 block">{new Date(item.created_at).toLocaleString()}</span>
+                                </div>
+                                <span className={`px-1 rounded uppercase font-bold text-[8px] shrink-0 ${
+                                  item.status === 'delivered' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-red-500/10 text-red-400 border border-red-500/20'
+                                }`}>
+                                  {item.status}
+                                </span>
+                              </div>
+                            ));
+                          })()}
+                        </div>
+                      </div>
                     </div>
 
                   </div>

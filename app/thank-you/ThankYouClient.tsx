@@ -81,7 +81,7 @@ export default function ThankYouClient() {
           const pRes = await fetch('/api/payment-methods');
           if (pRes.ok) {
             const methods = await pRes.json();
-            const matching = methods.find((m: any) => m.id === data.payment_method);
+            const matching = methods.find((m: any) => m.id === data.payment_method || m.name === data.payment_method);
             if (matching) {
               setInstructions(matching.instructions);
             }

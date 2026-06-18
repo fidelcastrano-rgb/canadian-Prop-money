@@ -26,6 +26,11 @@ CREATE TABLE IF NOT EXISTS orders (
   payment_method TEXT NOT NULL,
   status TEXT NOT NULL,
   created_at TEXT NOT NULL,
+  payment_instructions TEXT,
+  email_history TEXT,
+  email_sent_at TEXT,
+  last_email_subject TEXT,
+  payment_deadline TEXT,
   FOREIGN KEY (customer_id) REFERENCES customers (id)
 );
 

@@ -27,6 +27,11 @@ export interface Order {
   payment_method: string;
   status: string;
   created_at: string;
+  payment_instructions?: string | null;
+  email_history?: string | null;
+  email_sent_at?: string | null;
+  last_email_subject?: string | null;
+  payment_deadline?: string | null;
 }
 
 export interface OrderItem {
@@ -124,7 +129,16 @@ class InMemoryD1Database implements D1Database {
         total: 400.00,
         payment_method: "USDT",
         status: "Completed",
-        created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString()
+        created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString(),
+        payment_instructions: "Deposit Address: bc1qprop99bills763060089957dfwe45a",
+        email_sent_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString(),
+        last_email_subject: "Payment Instructions For Order #CPM-2026-000001",
+        email_history: JSON.stringify([{
+          created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString(),
+          subject: "Payment Instructions For Order #CPM-2026-000001",
+          recipient: "francis@cinemascope-studios.ca",
+          status: "delivered"
+        }])
       });
 
       globalAny.__mockD1Store.order_items.push({
@@ -249,7 +263,12 @@ class InMemoryPreparedStatement implements D1PreparedStatement {
             total: Number(this.params[6]),
             payment_method: this.params[7],
             status: this.params[8],
-            created_at: this.params[9]
+            created_at: this.params[9],
+            payment_instructions: this.params[10] || null,
+            email_history: this.params[11] || null,
+            email_sent_at: this.params[12] || null,
+            last_email_subject: this.params[13] || null,
+            payment_deadline: this.params[14] || null
           };
           this.store.orders.push(ord);
           changes = 1;
@@ -302,19 +321,31 @@ class InMemoryPreparedStatement implements D1PreparedStatement {
         });
       }
       else if (/^update orders/i.test(normalized)) {
-        // e.g. "UPDATE orders SET status = ? WHERE id = ?"
-        const matchSet = normalized.match(/set status = \?/i);
-        if (matchSet && this.params.length >= 2) {
-          const newStatus = this.params[0];
-          const orderId = this.params[1];
-          this.store.orders = this.store.orders.map((ord: Order) => {
-            if (ord.id === orderId) {
-              changes++;
-              return { ...ord, status: newStatus };
-            }
-            return ord;
-          });
-        }
+        // We parse set columns dynamically
+        const setPart = normalized.substring(
+          normalized.toLowerCase().indexOf("set") + 3,
+          normalized.toLowerCase().indexOf("where")
+        ).trim();
+        
+        const cols = setPart.split(',').map(c => {
+          const eqIdx = c.indexOf('=');
+          const colNameRaw = eqIdx !== -1 ? c.substring(0, eqIdx) : c;
+          return colNameRaw.trim().toLowerCase().replace(/^o\./, '');
+        });
+        
+        const idVal = this.params[this.params.length - 1]; // standard pattern where the last parameter is binded inside WHERE clause
+        
+        this.store.orders = this.store.orders.map((ord: any) => {
+          if (ord.id === idVal || ord.order_number === idVal) {
+            changes++;
+            const updatedOrd = { ...ord };
+            cols.forEach((col, idx) => {
+              updatedOrd[col] = this.params[idx];
+            });
+            return updatedOrd;
+          }
+          return ord;
+        });
       }
 
       // 3. DELETES
@@ -333,59 +364,60 @@ class InMemoryPreparedStatement implements D1PreparedStatement {
 
       // 4. SELECTS (Standard Read Queries)
       else if (/^select/i.test(normalized)) {
-        // High fidelity D1-compatible JSON assembler / query executer for client tracking and dashboard reads
-        
-        // CASE A: Fetch order with custom details joining customer and items for track-order
-        if (/where o\.order_number = \?/i.test(normalized) || /where order_number = \?/i.test(normalized)) {
-          const orderNum = this.params[0];
-          const custEmail = this.params[1]; // for track order match
-          
-          let matchingOrders = [...this.store.orders];
-          
-          if (orderNum) {
-            matchingOrders = matchingOrders.filter((o: Order) => o.order_number.toLowerCase() === orderNum.toLowerCase());
+        if (/from customers/i.test(normalized)) {
+          const bindVal = this.params[0];
+          if (bindVal) {
+            results = this.store.customers.filter((c: any) => 
+              c.id === bindVal || c.email.toLowerCase() === String(bindVal).toLowerCase()
+            ) as unknown as T[];
+          } else {
+            results = [...this.store.customers] as unknown as T[];
           }
-
-          results = matchingOrders.map((o: Order) => {
-            const customer = this.store.customers.find((c: Customer) => c.id === o.customer_id) || null;
-            const items = this.store.order_items.filter((i: OrderItem) => i.order_id === o.id);
-            const history = this.store.order_status_history.filter((h: OrderStatusHistory) => h.order_id === o.id)
-              .sort((a: any, b: any) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
-            
-            return {
-              ...o,
-              customer,
-              items,
-              history
-            };
-          }) as unknown as T[];
-
-          // If tracking via /track-order, filter by the validated email too
-          if (custEmail) {
-            results = results.filter((res: any) => res.customer && res.customer.email.toLowerCase() === custEmail.toLowerCase());
-          }
-        } 
-        
-        // CASE B: Fetching status history specifically
+        }
+        else if (/from order_items/i.test(normalized)) {
+          const orderId = this.params[0];
+          results = (orderId ? this.store.order_items.filter((item: any) => item.order_id === orderId) : [...this.store.order_items]) as unknown as T[];
+        }
         else if (/from order_status_history/i.test(normalized)) {
           const orderId = this.params[0];
           const hist = [...this.store.order_status_history];
-          results = (orderId ? hist.filter((h: OrderStatusHistory) => h.order_id === orderId) : hist) as unknown as T[];
+          results = (orderId ? hist.filter((h: any) => h.order_id === orderId) : hist) as unknown as T[];
         }
-
-        // CASE C: Get email logs
         else if (/from email_logs/i.test(normalized)) {
           const orderId = this.params[0];
-          results = this.store.email_logs.filter((log: EmailLog) => log.order_id === orderId) as unknown as T[];
+          results = (orderId ? this.store.email_logs.filter((log: any) => log.order_id === orderId) : [...this.store.email_logs]) as unknown as T[];
         }
-
-        // CASE C1: Get payment methods
         else if (/from payment_methods/i.test(normalized)) {
           results = [...this.store.payment_methods] as unknown as T[];
         }
-
-        // CASE D: Fetch details for admin list: joins orders, customers, order_items
+        else if (/from orders/i.test(normalized)) {
+          if (/join customers/i.test(normalized)) {
+            // E.g. SELECT o.* FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.order_number = ? AND c.email = ?
+            const orderNum = this.params[0];
+            const custEmail = this.params[1];
+            const matchingOrder = this.store.orders.find((o: any) => o.order_number.toLowerCase() === orderNum.toLowerCase());
+            if (matchingOrder) {
+              const customer = this.store.customers.find((c: any) => c.id === matchingOrder.customer_id && c.email.toLowerCase() === custEmail.toLowerCase());
+              if (customer) {
+                results = [matchingOrder] as unknown as T[];
+              }
+            }
+          } else {
+            // E.g. SELECT o.* FROM orders o WHERE o.order_number = ? or id = ?
+            const bindVal = this.params[0];
+            if (bindVal) {
+              const valLower = String(bindVal).toLowerCase();
+              results = this.store.orders.filter((o: any) => 
+                o.order_number.toLowerCase() === valLower || 
+                o.id.toLowerCase() === valLower
+              ) as unknown as T[];
+            } else {
+              results = [...this.store.orders] as unknown as T[];
+            }
+          }
+        }
         else {
+          // Fallback legacy JOIN assembler
           results = this.store.orders.map((o: Order) => {
             const customer = this.store.customers.find((c: Customer) => c.id === o.customer_id) || {
               id: '', first_name: '', last_name: '', email: '', phone: '', country: '', province: '', city: '', address: '', postal_code: '', created_at: ''

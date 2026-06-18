@@ -192,8 +192,8 @@ export async function POST(req: NextRequest) {
     // Insert order registration record
     const orderId = crypto.randomUUID();
     await db.prepare(`
-      INSERT INTO orders (id, order_number, customer_id, subtotal, shipping, discount, total, payment_method, status, created_at)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO orders (id, order_number, customer_id, subtotal, shipping, discount, total, payment_method, status, created_at, payment_instructions, email_history, email_sent_at, last_email_subject, payment_deadline)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).bind(
       orderId,
       orderNumber,
@@ -203,8 +203,13 @@ export async function POST(req: NextRequest) {
       Number(discount),
       Number(total),
       paymentDetails.name,
-      "Pending",
-      timestamp
+      "PENDING REVIEW",
+      timestamp,
+      null,
+      null,
+      null,
+      null,
+      null
     ).run();
 
     // Insert order purchases item rows
@@ -228,11 +233,7 @@ export async function POST(req: NextRequest) {
     await db.prepare(`
       INSERT INTO order_status_history (id, order_id, status, created_at)
       VALUES (?, ?, ?, ?)
-    `).bind(histId, orderId, "Pending", timestamp).run();
-
-    // Fetch chosen payment instructions for inclusion in Customer email, or use our customized dynamic instruction fallback
-    const pRes = await db.prepare("SELECT * FROM payment_methods WHERE id = ?").bind(paymentMethod).first<any>();
-    const paymentInstructions = pRes?.instructions || paymentDetails.instructionsText;
+    `).bind(histId, orderId, "PENDING REVIEW", timestamp).run();
 
     // BUILD EMAIL TEMPLATES
     const dateFormatted = new Date().toLocaleDateString('en-US', { dateStyle: 'long' });
@@ -245,20 +246,24 @@ export async function POST(req: NextRequest) {
           <p style="color: #888; font-size: 11px; margin: 5px 0 0 0;">FILM & CINEMATIC REPLICAS CLEARANCE DISPATCH</p>
         </div>
         <div style="padding: 30px 10px;">
-          <h1 style="font-size: 20px; font-weight: 400; color: #FFF; margin-top: 0;">Order Enquiry Received</h1>
+          <h1 style="font-size: 20px; font-weight: 400; color: #FFF; margin-top: 0;">Order Received</h1>
           <p style="font-size: 14px; line-height: 1.6; color: #CCC;">Hello <strong>${customer.firstName}</strong>,</p>
-          <p style="font-size: 14px; line-height: 1.6; color: #CCC;">Your movie props batch enquiry has been registered in the database under transaction number <strong>${orderNumber}</strong>.</p>
+          <p style="font-size: 14px; line-height: 1.6; color: #CCC;">Your order has been received and is currently under review. Payment instructions will be sent shortly.</p>
           
           <div style="background-color: #111; border: 1px solid #222; padding: 20px; border-radius: 6px; margin: 25px 0; font-family: monospace;">
-            <p style="margin: 0 0 10px 0; color: #FF6B1A; font-weight: bold; font-size: 11px; text-transform: uppercase;">🔒 IMMEDIATE ENQUIRY STEPS:</p>
-            <p style="margin: 0; color: #FFF; line-height: 1.5; font-size: 13px;">${paymentInstructions}</p>
+            <p style="margin: 0 0 10px 0; color: #888; text-transform: uppercase; font-size: 11px;">Order Summary Details:</p>
+            <div style="padding: 5px 0; font-size: 13px; color: #FFF;">
+              <div style="margin-bottom: 5px;"><strong>Order Number:</strong> ${orderNumber}</div>
+              <div style="margin-bottom: 5px;"><strong>Order Date:</strong> ${dateFormatted}</div>
+              <div><strong>Status:</strong> PENDING REVIEW</div>
+            </div>
             <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #222; display: flex; justify-content: space-between; font-size: 14px;">
               <span style="color: #888;">Order Total:</span>
               <strong style="color: #10B981;">$${Number(total).toFixed(2)} CAD</strong>
             </div>
           </div>
 
-          <h3 style="font-size: 13px; color: #FFF; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 5px; margin-top: 30px;">Itemized Specs</h3>
+          <h3 style="font-size: 13px; color: #FFF; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 5px; margin-top: 30px;">Products Ordered</h3>
           <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; margin-top: 10px;">
             <thead>
               <tr style="border-bottom: 1px solid #222; color: #888;">
@@ -277,11 +282,6 @@ export async function POST(req: NextRequest) {
               `).join('')}
             </tbody>
           </table>
-
-          <div style="margin-top: 25px; font-size: 12px; color: #888; background-color: #0F1115; border: 1px solid #1A1D24; padding: 15px; border-radius: 6px;">
-            <span style="display: block; font-weight: bold; color: #FFF; margin-bottom: 5px;">📍 Dispatch Destination Address:</span>
-            ${customer.address}, ${customer.city}, ${customer.province}, ${customer.postalCode}, ${customer.country}
-          </div>
         </div>
         <div style="border-top: 1px solid #1F1F22; padding-top: 20px; text-align: center; font-size: 11px; color: #555;">
           <p>© 2026 Canadian Prop Money Inc. All media bundles strictly governed under motion picture guidelines.</p>
@@ -331,7 +331,7 @@ export async function POST(req: NextRequest) {
 
     // SEND EMAILS IN PARALLEL SAFELY USING OUR EDGE ENVOY
     const [custEmailRes, adminEmailRes] = await Promise.all([
-      sendResendMail(customerEmailLower, `Order Confirmation #${orderNumber}`, customerEmailHtml),
+      sendResendMail(customerEmailLower, `Order Received - #${orderNumber}`, customerEmailHtml),
       sendResendMail("sales@canadianpropmoney.org", `New Order #${orderNumber}`, adminEmailHtml)
     ]);
 
