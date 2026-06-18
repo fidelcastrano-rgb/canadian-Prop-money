@@ -1,4 +1,5 @@
 import { BLOG_ARTICLES } from '@/lib/blogs';
+import { resolveImageUrl } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -17,34 +18,34 @@ export default function BlogPage() {
          </p>
          
          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-           {BLOG_ARTICLES.map((post) => (
-             <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-               <div className="bg-white/5 border border-white/10 hover:border-white/20 transition hover:bg-white/[0.07] h-full flex flex-col">
-                 <div className="relative aspect-[16/9] w-full overflow-hidden">
-                   {post.ogImage && (
-                     <Image 
-                       src={post.ogImage} 
-                       alt={post.title} 
-                       fill 
-                       className="object-cover group-hover:scale-105 transition-transform duration-700"
-                     />
-                   )}
-                 </div>
-                 <div className="p-6 flex flex-col flex-grow">
-                   <div className="flex justify-between items-start mb-4">
-                     <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-2 py-1">Set Resource</span>
-                     <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{post.date}</span>
-                   </div>
-                   <h2 className="text-xl text-white font-medium tracking-wide mb-3 group-hover:text-primary transition line-clamp-2">{post.title}</h2>
-                   <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">{post.description}</p>
-                   <div className="mt-auto text-primary text-[10px] uppercase tracking-widest font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Article &rarr;</div>
-                 </div>
-               </div>
-             </Link>
-           ))}
-         </div>
-      </div>
+            {BLOG_ARTICLES.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
+                <div className="bg-white/5 border border-white/10 hover:border-white/20 transition hover:bg-white/[0.07] h-full flex flex-col">
+                  <div className="relative aspect-[16/9] w-full overflow-hidden">
+                    {post.ogImage && (
+                      <Image 
+                        src={resolveImageUrl(post.ogImage)} 
+                        alt={post.title} 
+                        fill 
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                      />
+                    )}
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="flex justify-between items-start mb-4">
+                      <span className="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/10 px-2 py-1">Set Resource</span>
+                      <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{post.date}</span>
+                    </div>
+                    <h2 className="text-xl text-white font-medium tracking-wide mb-3 group-hover:text-primary transition line-clamp-2">{post.title}</h2>
+                    <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">{post.description}</p>
+                    <div className="mt-auto text-primary text-[10px] uppercase tracking-widest font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Article &rarr;</div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+       </div>
     </div>
   );
 }
-

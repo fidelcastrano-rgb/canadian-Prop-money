@@ -2,6 +2,7 @@
 
 import { Product } from '@/lib/store';
 import { useCart } from '@/lib/store';
+import { resolveImageUrl } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -27,7 +28,7 @@ export function ProductCard({ product }: { product: Product }) {
             {product.badge}
           </span>
         )}
-        <Image src={product.image} alt={product.name} fill className="object-cover" referrerPolicy="no-referrer" />
+        <Image src={resolveImageUrl(product.image)} alt={product.name} fill className="object-cover" referrerPolicy="no-referrer" />
       </Link>
       
       <div className="p-5 flex flex-col flex-1">

@@ -1,6 +1,7 @@
 'use client';
 
 import { Product, useCart } from '@/lib/store';
+import { resolveImageUrl } from '@/lib/utils';
 import Image from 'next/image';
 import { useState } from 'react';
 import { ShieldCheck, Info, Package, Truck, MessageSquare, Mail } from 'lucide-react';
@@ -34,17 +35,17 @@ export function ProductDetailClient({ product }: { product: Product }) {
                {product.badge}
              </span>
           )}
-          <Image src={product.image} alt={product.name} fill className="object-cover" referrerPolicy="no-referrer" priority />
+          <Image src={resolveImageUrl(product.image)} alt={product.name} fill className="object-cover" referrerPolicy="no-referrer" priority />
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div className="relative aspect-[4/3] overflow-hidden bg-white/5 border border-primary cursor-pointer">
-             <Image src={product.image} alt={`${product.name} view 1`} fill className="object-cover" referrerPolicy="no-referrer" />
+             <Image src={resolveImageUrl(product.image)} alt={`${product.name} view 1`} fill className="object-cover" referrerPolicy="no-referrer" />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden bg-black/40 border border-white/10 cursor-pointer opacity-70 hover:opacity-100 transition">
-             <Image src={product.image} alt={`${product.name} view 2`} fill className="object-cover" referrerPolicy="no-referrer" />
+             <Image src={resolveImageUrl(product.image)} alt={`${product.name} view 2`} fill className="object-cover" referrerPolicy="no-referrer" />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden bg-black/40 border border-white/10 cursor-pointer opacity-70 hover:opacity-100 transition">
-             <Image src={product.image} alt={`${product.name} view 3`} fill className="object-cover" referrerPolicy="no-referrer" />
+             <Image src={resolveImageUrl(product.image)} alt={`${product.name} view 3`} fill className="object-cover" referrerPolicy="no-referrer" />
           </div>
         </div>
       </div>

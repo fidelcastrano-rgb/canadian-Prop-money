@@ -1,6 +1,7 @@
 'use client';
 
 import { useCart } from '@/lib/store';
+import { resolveImageUrl } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -508,7 +509,7 @@ export default function CheckoutPage() {
                   <div key={item.key} className="py-4 flex gap-4 first:pt-0 last:pb-0">
                     <div className="relative w-16 h-16 bg-black/60 border border-white/10 rounded overflow-hidden shrink-0">
                       <Image 
-                        src={item.product.image} 
+                        src={resolveImageUrl(item.product.image)} 
                         alt={item.product.name} 
                         fill 
                         className="object-cover"
