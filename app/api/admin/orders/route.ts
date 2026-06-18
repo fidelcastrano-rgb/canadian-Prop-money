@@ -154,6 +154,10 @@ export async function POST(req: NextRequest) {
     if (action === 'send_payment_instructions') {
       const { paymentInstructions, subject: customSubject, paymentMethod, paymentDeadline } = body;
       
+      if (!paymentInstructions || paymentInstructions.trim() === '') {
+        return NextResponse.json({ error: "Payment instructions empty." }, { status: 400 });
+      }
+
       // 1. Save latest payment instructions, custom payment method and optional deadline to DB
       await db.prepare(`
         UPDATE orders 

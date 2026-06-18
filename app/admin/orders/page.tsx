@@ -299,7 +299,8 @@ export default function AdminDashboardPage() {
         triggerNotify(data.message || 'Payment instructions emailed.');
         setRefreshCount(prev => prev + 1);
       } else {
-        triggerNotify('Failed to dispatch payment instructions.', true);
+        const errData = await res.json().catch(() => ({}));
+        triggerNotify(errData.error || errData.message || 'Failed to dispatch payment instructions.', true);
       }
     } catch (err) {
       console.error(err);
@@ -907,8 +908,22 @@ export default function AdminDashboardPage() {
                         />
                       </div>
 
+                      {/* Recipient Display */}
+                      <div className="bg-white/5 border border-white/10 rounded-md p-2.5 flex items-center justify-between mb-3 shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+                        <div>
+                          <span className="block text-[9px] uppercase font-bold text-gray-500 mb-0.5">Recipient Email</span>
+                          <span className="font-mono text-xs text-white selection:bg-primary/30">
+                            {order.customer?.email ? (
+                              <a href={`mailto:${order.customer.email}`} className="text-primary hover:underline">{order.customer.email}</a>
+                            ) : (
+                              <span className="text-red-400">NO EMAIL ON RECORD</span>
+                            )}
+                          </span>
+                        </div>
+                      </div>
+
                       {/* Operation action dispatch line */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap items-center gap-2">
                         <button
                           type="button"
                           onClick={() => {

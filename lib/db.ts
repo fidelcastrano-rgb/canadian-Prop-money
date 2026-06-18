@@ -103,76 +103,7 @@ class InMemoryD1Database implements D1Database {
       };
 
       // Seed initial dummy data so the admin visualizes some order history right away
-      const initialCustomerId = "cust-1";
-      globalAny.__mockD1Store.customers.push({
-        id: initialCustomerId,
-        first_name: "Francis",
-        last_name: "Delacroix",
-        email: "francis@cinemascope-studios.ca",
-        phone: "+1 (514) 555-0192",
-        country: "Canada",
-        province: "Quebec",
-        city: "Montreal",
-        address: "7400 Boulevard Saint-Laurent",
-        postal_code: "H2R 2Y1",
-        created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString()
-      });
-
-      const initialOrderId = "ord-1";
-      globalAny.__mockD1Store.orders.push({
-        id: initialOrderId,
-        order_number: "CPM-2026-000001",
-        customer_id: initialCustomerId,
-        subtotal: 400.00,
-        shipping: 0.00,
-        discount: 0.00,
-        total: 400.00,
-        payment_method: "USDT",
-        status: "Completed",
-        created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString(),
-        payment_instructions: "Deposit Address: bc1qprop99bills763060089957dfwe45a",
-        email_sent_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString(),
-        last_email_subject: "Payment Instructions For Order #CPM-2026-000001",
-        email_history: JSON.stringify([{
-          created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString(),
-          subject: "Payment Instructions For Order #CPM-2026-000001",
-          recipient: "francis@cinemascope-studios.ca",
-          status: "delivered"
-        }])
-      });
-
-      globalAny.__mockD1Store.order_items.push({
-        id: "item-1",
-        order_id: initialOrderId,
-        product_id: "ca-100-stack",
-        product_name: "Buy Counterfeit $100 Canadian Dollars Banknotes (Compact Bundle)",
-        quantity: 1,
-        price: 400.00
-      });
-
-      globalAny.__mockD1Store.order_status_history.push(
-        {
-          id: "hist-1",
-          order_id: initialOrderId,
-          status: "Pending",
-          created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString()
-        },
-        {
-          id: "hist-2",
-          order_id: initialOrderId,
-          status: "Completed",
-          created_at: new Date(Date.now() - 24 * 3600 * 1000).toISOString()
-        }
-      );
-
-      globalAny.__mockD1Store.email_logs.push({
-        id: "log-1",
-        order_id: initialOrderId,
-        email_type: "customer_order_confirmation",
-        recipient: "francis@cinemascope-studios.ca",
-        status: "delivered",
-        created_at: new Date(Date.now() - 48 * 3600 * 1000).toISOString()
-      });
+      // REMOVED seed data to prevent fallback mock customer data loading
     }
     return globalAny.__mockD1Store;
   }
