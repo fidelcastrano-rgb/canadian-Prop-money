@@ -1,95 +1,64 @@
-'use client';
+import { FAQClient } from './FAQClient';
+import { FAQS } from './faqData';
 
-import { useState } from 'react';
-import { ChevronDown, Search } from 'lucide-react';
-
-const FAQS = [
-  {q: "How fast is shipping to the US?", a: "We offer expedited shipping arriving within 2-4 business days across North America. Tracking is provided discreetly via email.", cat: "Delivery"},
-  {q: "Is the packaging discreet?", a: "Yes. All orders are shipped in unmarked, standard boxes without any external logos indicating the contents to ensure privacy and security.", cat: "Delivery"},
-  {q: "Do you offer bulk production discounts?", a: "Yes, for orders over $5,000 we provide custom production quotes. Please contact our sales team.", cat: "Pricing"},
-  {q: "What payment methods are accepted?", a: "We prefer Crypto for the fastest processing. We also accept E-Transfer (Canada), Zelle/Apple Cash (US), and secure Credit Card processing.", cat: "Buying & Ordering"},
-  {q: "How realistic is the texture?", a: "We use high-grade textured paper that replicates the physical stiffness of new bills. For our New Series, we apply a specialized finish that mimics polymer without causing camera glare.", cat: "Quality"},
-  {q: "Are the bills double-sided?", a: "Yes, all our props are double-sided with high-resolution, altered artwork on both faces.", cat: "Products"},
-];
-
-const CATEGORIES = ["All", "Buying & Ordering", "Pricing", "Quality", "Delivery", "Products"];
+export const metadata = {
+  title: 'Compliant Prop Money Support & FAQs | Canadian Prop Money',
+  description: 'Have questions about Bank of Canada regulations, RCMP compliance, shipping, bulk discounts, or polymer matte quality? Read our comprehensive cinematic prop currency FAQ.',
+  alternates: {
+    canonical: 'https://canadianpropmoney.org/faq',
+  }
+};
 
 export default function FAQPage() {
-  const [search, setSearch] = useState('');
-  const [activeCat, setActiveCat] = useState('All');
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://canadianpropmoney.org'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'FAQs',
+        item: 'https://canadianpropmoney.org/faq'
+      }
+    ]
+  };
 
-  const filteredFaqs = FAQS.filter(faq => {
-    const matchesSearch = faq.q.toLowerCase().includes(search.toLowerCase()) || faq.a.toLowerCase().includes(search.toLowerCase());
-    const matchesCat = activeCat === 'All' || faq.cat === activeCat;
-    return matchesSearch && matchesCat;
-  });
+  const faqPageLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a
+      }
+    }))
+  };
 
   return (
-    <div className="bg-background min-h-screen pt-12 pb-24">
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h1 className="text-4xl sm:text-5xl font-light text-white tracking-tight mb-4 uppercase">Support & FAQs</h1>
-            <p className="text-gray-400 max-w-2xl text-sm mb-8 leading-relaxed">
-              Find answers to common questions about ordering, legal compliance, and shipping.
-            </p>
-            
-            <div className="relative max-w-xl">
-               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
-               <input 
-                 type="text" 
-                 placeholder="Search FAQs..." 
-                 value={search}
-                 onChange={(e) => setSearch(e.target.value)}
-                 className="w-full pl-12 pr-4 py-4 bg-transparent border border-white/10 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white text-sm"
-               />
-            </div>
-          </div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageLd) }} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-             <div className="lg:col-span-1">
-                <div className="sticky top-28 bg-white/5 border border-white/10 p-4">
-                   <h3 className="text-[10px] font-bold text-white uppercase tracking-widest mb-4 px-3">Categories</h3>
-                   <ul className="space-y-1">
-                     {CATEGORIES.map(cat => (
-                        <li key={cat}>
-                           <button 
-                             onClick={() => setActiveCat(cat)}
-                             className={`w-full text-left px-3 py-2 text-[10px] uppercase tracking-widest font-bold transition ${
-                               activeCat === cat ? 'bg-primary text-white' : 'text-gray-400 hover:bg-white/10 hover:text-white'
-                             }`}
-                           >
-                             {cat}
-                           </button>
-                        </li>
-                     ))}
-                   </ul>
-                </div>
-             </div>
-             
-             <div className="lg:col-span-3 space-y-4">
-                {filteredFaqs.length > 0 ? (
-                  filteredFaqs.map((faq, idx) => (
-                    <details key={idx} className="group bg-white/5 border border-white/10 open:bg-black/40 transition">
-                      <summary className="flex items-center justify-between p-6 cursor-pointer text-sm font-bold uppercase tracking-widest select-none text-white">
-                        {faq.q}
-                        <ChevronDown className="w-5 h-5 text-gray-500 group-open:rotate-180 transition" />
-                      </summary>
-                      <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
-                        {faq.a}
-                         <div className="mt-4 inline-block px-2 py-1 bg-white/10 text-[9px] uppercase tracking-widest font-bold text-gray-400">
-                           {faq.cat}
-                         </div>
-                      </div>
-                    </details>
-                  ))
-                ) : (
-                  <div className="text-center py-12 bg-white/5 border border-white/10">
-                     <p className="text-gray-500 text-xs font-bold uppercase tracking-widest">No FAQs found for your search.</p>
-                  </div>
-                )}
-             </div>
-          </div>
-       </div>
-    </div>
+      <div className="bg-background min-h-screen pt-12 pb-24">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12">
+              <h1 className="text-4xl sm:text-5xl font-light text-white tracking-tight mb-4 uppercase">Support & FAQs</h1>
+              <p className="text-gray-400 max-w-2xl text-sm leading-relaxed">
+                Check regulations and legal guides on movie prop money use. Query billing and dispatch specifications or connect direct to our sales desk.
+              </p>
+            </div>
+
+            <FAQClient />
+         </div>
+      </div>
+    </>
   );
 }

@@ -20,11 +20,10 @@ export function Footer() {
             <h4 className="text-[10px] text-gray-500 uppercase tracking-widest mb-4">Products</h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li><Link href="/products" className="hover:text-primary transition">All Prop Money</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition">Canadian Dollars</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition">US Dollars</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition">UK Pounds</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition">Australian Dollars</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition">Euro</Link></li>
+              <li><Link href="/category/canadian-dollars" className="hover:text-primary transition">Canadian Dollars</Link></li>
+              <li><Link href="/category/us-dollars" className="hover:text-primary transition">US Dollars</Link></li>
+              <li><Link href="/category/australian-dollars" className="hover:text-primary transition">Australian Dollars</Link></li>
+              <li><Link href="/category/euro" className="hover:text-primary transition">Euro Collection</Link></li>
             </ul>
           </div>
 

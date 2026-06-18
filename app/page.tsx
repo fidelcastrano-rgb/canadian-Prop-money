@@ -161,7 +161,7 @@ export default function Home() {
                  To aggressively combat this, the engineering team at Canadian Prop Money has painstakingly developed a proprietary, multi-layered non-glare finish that actively diffuses harsh lighting. This complex chemical coating is applied during the very final stages of the offset printing process and is specifically formulated to interact seamlessly with professional cinematic lighting setups. 
                </p>
                <p className="text-white font-normal p-6 border-l-2 border-primary bg-white/5 text-left italic">
-                 "Whether your Director of Photography is shooting under a blazing 18K HMI on a massive soundstage, utilizing advanced LED volume walls for virtual production, or relying entirely on natural light for a gritty, run-and-gun indie short film—our prop money is engineered to maintain its intended color temperature, depth, and texture without blinding the lens."
+                 &quot;Whether your Director of Photography is shooting under a blazing 18K HMI on a massive soundstage, utilizing advanced LED volume walls for virtual production, or relying entirely on natural light for a gritty, run-and-gun indie short film—our prop money is engineered to maintain its intended color temperature, depth, and texture without blinding the lens.&quot;
                </p>
                <p>
                  This microscopic diffusion layer also significantly enhances the micro-detailing of our prints. Intricate geometric patterns, complex line work, and the architectural representations on the faces of the bills remain remarkably crisp and easily resolvable, ensuring that your camera sensor captures the immense depth of the engraving-style printing without being overwhelmed by reflection.
@@ -194,7 +194,7 @@ export default function Home() {
                   <MusicIcon />
                   <h3 className="text-xl font-bold text-white uppercase tracking-widest mb-4 font-syne mt-6">Music Videos & Media</h3>
                   <p className="text-sm text-gray-400 font-light leading-relaxed">
-                    The music industry frequently demands high visual impact to convey themes of success, wealth, and power. Our prop money provides the necessary visual flex needed for high-energy music videos, allowing directors to feature sprawling piles of cash or dynamic, slow-motion "make it rain" sequences without risking the severe safety hazards of having massive amounts of actual, spendable cash unsecured on location.
+                    The music industry frequently demands high visual impact to convey themes of success, wealth, and power. Our prop money provides the necessary visual flex needed for high-energy music videos, allowing directors to feature sprawling piles of cash or dynamic, slow-motion &quot;make it rain&quot; sequences without risking the severe safety hazards of having massive amounts of actual, spendable cash unsecured on location.
                   </p>
                </div>
 
@@ -250,7 +250,7 @@ export default function Home() {
                        Every single prototype and production design created by Canadian Prop Money is painstakingly analyzed, reviewed by external legal parameters, and continuously updated to ensure complete, unquestionable adherence to <strong className="text-white font-medium">Section 411 of the Criminal Code of Canada</strong>, as well as aligning with the strictest international guidelines for motion picture currency reproduction (including United States Secret Service guidelines for stateside productions importing our products).
                      </p>
                      <p>
-                       Our proprietary designs feature an array of mandatory visual alterations that satisfy all legal requirements while maintaining striking cinematic realism. These modifications include necessary dimensional adjustments, altered historical portraits with subtle artistic modifications, fictionalized issuing authorities, modified serial numbers that flag immediately in banking systems, and distinct, legally mandated "FOR MOTION PICTURE USE ONLY" labeling prominent on both the obverse and reverse sides of every bill.
+                       Our proprietary designs feature an array of mandatory visual alterations that satisfy all legal requirements while maintaining striking cinematic realism. These modifications include necessary dimensional adjustments, altered historical portraits with subtle artistic modifications, fictionalized issuing authorities, modified serial numbers that flag immediately in banking systems, and distinct, legally mandated &quot;FOR MOTION PICTURE USE ONLY&quot; labeling prominent on both the obverse and reverse sides of every bill.
                      </p>
                      <p>
                        Crucially, all sophisticated security features present on real Canadian polymer notes—such as the complex transparent holographic windows, color-shifting metallic inks, and raised tactile micro-printing—are strictly omitted. We replace these with highly detailed, flat-printed representations that look utterly convincing to the camera but possess zero functional security features when handled by authorities.
@@ -313,7 +313,7 @@ export default function Home() {
                  <div className="bg-background border border-white/5 p-8">
                     <Zap className="w-6 h-6 text-white mb-4" />
                     <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-3">UV Cured Inks</h3>
-                    <p className="text-xs text-gray-500 font-light leading-relaxed">The ink is cured using specialized ultra-violet processes, meaning it heavily resists smudging from sweaty hands and doesn't crack catastrophically when folded abruptly.</p>
+                    <p className="text-xs text-gray-500 font-light leading-relaxed">The ink is cured using specialized ultra-violet processes, meaning it heavily resists smudging from sweaty hands and doesn&apos;t crack catastrophically when folded abruptly.</p>
                  </div>
               </div>
            </div>
