@@ -725,13 +725,13 @@ export default function AdminDashboardPage() {
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 text-xs text-gray-300">
                     
                     {/* Item list */}
-                    <div className="md:col-span-6 space-y-2">
+                    <div className="md:col-span-4 space-y-2">
                       <span className="block text-[9px] uppercase font-bold text-gray-500">Products Specs:</span>
                       <ul className="divide-y divide-white/5 font-mono">
                         {order.items?.map((it, idx) => (
                           <li key={idx} className="py-2 flex justify-between items-center bg-black/25 px-2 rounded mt-1">
-                            <span>{it.product_name} <span className="text-gray-500">x{it.quantity}</span></span>
-                            <span className="text-emerald-400 font-bold">${(it.price * it.quantity).toFixed(2)}</span>
+                            <span className="truncate pr-1">{it.product_name} <span className="text-gray-500">x{it.quantity}</span></span>
+                            <span className="text-emerald-400 font-bold shrink-0">${(it.price * it.quantity).toFixed(2)}</span>
                           </li>
                         ))}
                       </ul>
@@ -751,8 +751,26 @@ export default function AdminDashboardPage() {
                       )}
                     </div>
 
+                    {/* Email Recipient Block */}
+                    <div className="md:col-span-3 space-y-1 bg-white/[0.01] border border-white/5 p-2 rounded-lg">
+                      <span className="block text-[9px] uppercase font-bold text-amber-500">EMAIL RECIPIENT</span>
+                      {order.customer?.email ? (
+                        <div className="text-[11px] text-gray-400 space-y-1 font-mono">
+                          <p className="font-semibold text-white truncate text-xs select-all" title="Click or drag to select email">{order.customer.email}</p>
+                          <div className="text-[10px] text-gray-500 space-y-0.5 font-sans">
+                            <p>Name: <span className="text-gray-300 font-semibold">{order.customer.first_name} {order.customer.last_name}</span></p>
+                            <p>Phone: <span className="text-gray-300">{order.customer.phone || 'N/A'}</span></p>
+                            <p>Country: <span className="text-gray-300 font-semibold">{order.customer.country || 'N/A'}</span></p>
+                            <p>Ref: <span className="text-white font-mono">{order.order_number}</span></p>
+                          </div>
+                        </div>
+                      ) : (
+                        <p className="text-xs text-red-400 font-bold">⚠️ No customer email found for this order.</p>
+                      )}
+                    </div>
+
                     {/* Financial details summary */}
-                    <div className="md:col-span-3 space-y-1 font-mono text-left sm:text-right">
+                    <div className="md:col-span-2 space-y-1 font-mono text-left sm:text-right">
                       <span className="block text-[9px] uppercase font-bold text-gray-500 text-left sm:text-right">Financial Ledger:</span>
                       <p className="text-gray-500">Subtotal: ${order.subtotal?.toFixed(2)}</p>
                       <p className="text-gray-500">Shipping: ${order.shipping?.toFixed(2)}</p>

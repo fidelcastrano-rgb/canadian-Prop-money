@@ -305,7 +305,7 @@ export async function POST(req: NextRequest) {
         <h3 style="font-size: 13px; color: #ECEEFE; text-transform: uppercase;">Customer Details</h3>
         <p style="font-size: 13px; line-height: 1.5; color: #CCC; margin: 5px 0;">
           Name: <strong>${customer.firstName} ${customer.lastName}</strong><br />
-          Email: <a href="mailto:sales@canadianpropmoney.org" style="color: #38BDF8; font-weight: bold;">${customer.email}</a><br />
+          Email: <a href="mailto:${customer.email}" style="color: #38BDF8; font-weight: bold;">${customer.email}</a><br />
           Phone: <strong>${customer.phone}</strong><br />
           Shipping: <strong>${customer.address}, ${customer.city}, ${customer.province}, ${customer.postalCode}, ${customer.country}</strong>
         </p>

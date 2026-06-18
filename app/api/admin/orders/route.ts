@@ -176,6 +176,12 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "Customer not found" }, { status: 404 });
       }
 
+      // Customer email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!customer.email || !emailPattern.test(customer.email.trim())) {
+        return NextResponse.json({ error: "No customer email found for this order." }, { status: 400 });
+      }
+
       const items = await db.prepare("SELECT * FROM order_items WHERE order_id = ?").bind(orderId).all<any>();
       const itemsList = items.results || [];
 
@@ -362,6 +368,16 @@ export async function POST(req: NextRequest) {
       }
 
       const customer = await db.prepare("SELECT * FROM customers WHERE id = ?").bind(order.customer_id).first<any>();
+      if (!customer) {
+        return NextResponse.json({ error: "Customer not found" }, { status: 404 });
+      }
+
+      // Customer email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!customer.email || !emailPattern.test(customer.email.trim())) {
+        return NextResponse.json({ error: "No customer email found for this order." }, { status: 400 });
+      }
+
       const items = await db.prepare("SELECT * FROM order_items WHERE order_id = ?").bind(order.id).all<any>();
       const itemsList = items.results;
 
