@@ -2,6 +2,8 @@ import { NextResponse, NextRequest } from 'next/server';
 import { getD1 } from '@/lib/db';
 import { getUniquePaymentMethods } from '@/lib/payment-methods';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const db = getD1();

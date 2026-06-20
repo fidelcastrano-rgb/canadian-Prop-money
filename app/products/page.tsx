@@ -6,6 +6,15 @@ import { PRODUCTS } from '@/lib/data';
 export const metadata = {
   title: 'Shop All Prop Money | Cinema-Grade Replica Banknotes',
   description: 'Explore Canada’s largest selection of premium, dual-sided realistic prop money bundles. Perfect for 4K video shoots, movies, or bank training setups.',
+  keywords: [
+    "Shop Prop Money",
+    "Buy Fake Money",
+    "Prop Money Stacks",
+    "Movie Money for Sale",
+    "High-Fidelity Prop Cash",
+    "Cinematic Currency Replicas",
+    "Full Print Prop Money"
+  ],
   alternates: {
     canonical: 'https://canadianpropmoney.org/products',
   }

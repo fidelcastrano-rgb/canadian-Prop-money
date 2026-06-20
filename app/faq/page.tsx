@@ -4,6 +4,15 @@ import { FAQS } from './faqData';
 export const metadata = {
   title: 'Compliant Prop Money Support & FAQs | Canadian Prop Money',
   description: 'Have questions about Bank of Canada regulations, RCMP compliance, shipping, bulk discounts, or polymer matte quality? Read our comprehensive cinematic prop currency FAQ.',
+  keywords: [
+    "Prop Money Rules",
+    "Fake Money Laws Canada",
+    "Is Prop Money Illegal",
+    "RCMP Prop Money Rules",
+    "Prop Maker Compliance",
+    "Bank of Canada Prop Regulations",
+    "Section 411 Valid Dummy Cash"
+  ],
   alternates: {
     canonical: 'https://canadianpropmoney.org/faq',
   }

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getD1 } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
 
 // 1. GET handles getting a specific order's details (for Thank-You and Track-Order)
 export async function GET(req: NextRequest) {

@@ -3,6 +3,14 @@ import { Mail, MessageSquare, MapPin } from 'lucide-react';
 export const metadata = {
   title: 'Contact Dispatch & Sales Desk | Canadian Prop Money',
   description: 'Connect with our Canadian Prop Money dispatch desk. Contact sales@canadianpropmoney.org or message us via WhatsApp at +1 (843) 732-0661 for bulk or custom inquiries.',
+  keywords: [
+    "Contact Canadian Prop Money",
+    "Prop Money Customer Service",
+    "Buy Bulk Prop Money",
+    "Custom Fake Currency Orders",
+    "Canadian Prop Money Phone Number",
+    "Wholesale Movie Cash"
+  ],
   alternates: {
     canonical: 'https://canadianpropmoney.org/contact',
   }

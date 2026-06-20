@@ -6,6 +6,14 @@ import Image from 'next/image';
 export const metadata = {
   title: 'Movie Cash Sourcing & Film Design Blog | Prop Journals',
   description: 'Get the latest guides and tutorials on movie prop cash creation, polymer replication materials, filming compliance regulations, and Hollywood North set designs.',
+  keywords: [
+    "Prop Money Blog",
+    "Movie Cash Guide",
+    "Filming Compliance Regulations",
+    "How to use Prop Money",
+    "Movie Prop Tutorials",
+    "Prop Maker Secrets"
+  ]
 };
 
 export default function BlogPage() {

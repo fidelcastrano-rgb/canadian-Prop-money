@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: seo.title,
     description: seo.description,
+    keywords: seo.keywords || [],
     alternates: {
       canonical: `https://canadianpropmoney.org/category/${slug}`,
     },
@@ -173,55 +174,70 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               )}
 
               {/* Extended SEO Content Sections */}
-              <div className="border-t border-white/10 pt-16">
+              <div className="border-t border-white/10 pt-16 animate-fade-in">
+                {/* 1. Product Overview & Benefits */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                   <div>
-                    <h2 className="text-2xl font-light text-white uppercase tracking-tight mb-4">Why Choose {seo.name} Prop Money</h2>
+                    <h2 className="text-2xl font-normal text-white uppercase tracking-tight mb-4 select-none">Product Overview: Best-In-Class Quality</h2>
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                      Our {seo.name} prop money stands out because of our unwavering commitment to quality and legal compliance. Every stack is created with the needs of professional filmmakers and photographers in mind. The intricate designs mimic the real currency flawlessly on camera while adhering to strict legal requirements.
+                      Our {seo.name} prop money stacks represent the absolute pinnacle of visual filmmaking. Every bundle is designed with the rigorous demands of professional filming in mind. The intricate front-and-back designs replicate the aesthetic qualities of real currency on camera, while maintaining strict compliance with all relevant federal regulations and security guidelines.
                     </p>
                     <p className="text-gray-400 text-sm leading-relaxed">
-                      Whether developing dynamic heist sequences or close-up static shots, these props provide the depth, color accuracy, and texture vital for modern 4K and 8K cinematic productions.
+                      We prioritize legal compliance, ensuring that our products serve their purpose seamlessly without posing any liability to creators, actors, or production crews.
                     </p>
                   </div>
                   <div>
-                    <h2 className="text-2xl font-light text-white uppercase tracking-tight mb-4">Features & Benefits</h2>
+                    <h2 className="text-2xl font-normal text-white uppercase tracking-tight mb-4 select-none">Aesthetic Features</h2>
                     <ul className="space-y-3 text-gray-400 text-sm">
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        Meticulously color-matched to real {seo.name} denominations.
+                        Meticulously color-matched to real {seo.name} denominations using high-precision Pantone tinting profiles.
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        Anti-glare matte coating for flawless lighting control.
+                        Anti-glare chemical matte curing for ultimate studio lighting control under high-end HMI and LED arrays.
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        Professionally bundled with authentic-looking bank straps.
+                        Double-sided offset printing with high-resolution details on both the obverse and reverse sides.
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        Double-sided printing with required legal disclaimers.
+                        Bound secure with heavy-duty paper straps designed to replicate authentic cash-counting houses.
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                {/* How to choose section */}
-                {seo.howToChoose && (
-                  <div className="mb-16">
-                    <h2 className="text-2xl font-light text-white uppercase tracking-tight mb-4">How to Choose The Right Product</h2>
-                    <p className="text-gray-400 text-sm leading-relaxed">
-                      {seo.howToChoose}
-                    </p>
-                  </div>
-                )}
+                {/* 2. Buying Guide */}
+                <div className="mb-16">
+                  <h2 className="text-2xl font-normal text-white uppercase tracking-tight mb-4 select-none">Comprehensive Buying Guide</h2>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {seo.buyingGuide}
+                  </p>
+                </div>
 
-                {/* FAQ Section */}
-                <h2 className="text-2xl font-light text-white uppercase tracking-tight mb-8">Frequently Asked Questions</h2>
+                {/* 3. Currency Information */}
+                <div className="mb-16">
+                  <h2 className="text-2xl font-normal text-white uppercase tracking-tight mb-4 select-none">Currency Design & Physical Specifications</h2>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {seo.currencyInfo}
+                  </p>
+                </div>
+
+                {/* 4. On-Set Handling & Care */}
+                <div className="mb-16">
+                  <h2 className="text-2xl font-normal text-white uppercase tracking-tight mb-4 select-none">Usage Information & On-Set Handling Protocol</h2>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {seo.usageInfo}
+                  </p>
+                </div>
+
+                {/* Expanded FAQ Section */}
+                <h2 className="text-2xl font-normal text-white uppercase tracking-tight mb-8 select-none">Frequently Asked Questions</h2>
                 <div className="space-y-6 max-w-3xl">
                   {seo.faqs.map((faq, index) => (
-                    <div key={index} className="bg-white/5 border border-white/10 p-6 rounded-sm">
+                    <div key={index} id={`faq-${index}`} className="bg-white/5 border border-white/10 p-6 rounded-sm">
                       <h3 className="text-lg font-medium text-white mb-2">{faq.question}</h3>
                       <p className="text-gray-400 text-sm leading-relaxed">{faq.answer}</p>
                     </div>

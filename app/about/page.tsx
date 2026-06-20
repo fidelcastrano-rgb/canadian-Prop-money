@@ -3,6 +3,13 @@ import Image from 'next/image';
 export const metadata = {
   title: 'About Our Film Props | Canadian Prop Money',
   description: 'Learn about Canadian Prop Money, established in 2012. We design ultra-realistic, compliant currency props with non-glare coatings and certificates of authenticity.',
+  keywords: [
+    "About Canadian Prop Money",
+    "Prop Money Makers",
+    "Fake Currency Designers",
+    "Movie Prop Company",
+    "Realistic Prop Money History"
+  ],
   alternates: {
     canonical: 'https://canadianpropmoney.org/about',
   }

@@ -90,7 +90,7 @@ export default function Home() {
                <h3 className="text-xs font-bold uppercase tracking-widest mb-2 font-syne">Encrypted Checkout</h3>
                <p className="text-sm text-gray-500 leading-relaxed font-light">We support secure Cryptocurrency (Bitcoin, ETH), Zelle, Apple Cash & standard E-Transfer payments.</p>
             </div>
-        </div>
+         </div>
       </section>
 
       {/* 4. The Engineering Behind the Illusion */}
@@ -98,7 +98,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             <div className="lg:w-1/2 relative aspect-square w-full max-w-lg mx-auto order-2 lg:order-1">
-              <Image src="/images/OIP.webp" alt="Precision printing details" fill className="object-cover shadow-2xl border border-white/5 opacity-90" referrerPolicy="no-referrer" />
+              <Image src="/images/OIP.webp" alt="Precision printing details of Canadian Prop Money replicas" fill className="object-cover shadow-2xl border border-white/5 opacity-90" referrerPolicy="no-referrer" />
               <div className="absolute -bottom-8 -right-8 bg-black p-8 shadow-2xl border border-white/10 max-w-xs hidden md:block">
                 <Search className="w-6 h-6 text-primary mb-4" />
                 <p className="text-sm font-bold tracking-widest uppercase text-white mb-2 font-syne">Micro-Detailing</p>
@@ -107,17 +107,20 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2 space-y-6 order-1 lg:order-2">
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20 px-3 py-1 bg-primary/5">Methodology</span>
-              <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight leading-[1.2]">The Engineering Behind the Cinematic Illusion.</h2>
+              <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight leading-[1.2]">The Engineering Behind the Cinematic Illusion of Prop Money.</h2>
               
               <div className="space-y-4 text-base text-gray-400 font-light leading-relaxed">
                 <p>
-                  Creating convincing motion picture currency is an intricate, highly specialized balance between achieving staggering hyper-realism for the camera and adhering to the strict, uncompromising legal constraints set forth by federal authorities. At Canadian Prop Money, we don&apos;t just hit &quot;print&quot; on commercial office equipment. We utilize state-of-the-art, industrial-grade offset presses and specialized, heavyweight textured synthetic paper stocks. Our goal is to replicate the exact dimensions, highly specific color profiles, and overall visual weight of authentic Canadian currency.
+                  Creating convincing motion picture currency is an intricate, highly specialized balance between achieving staggering hyper-realism for the camera and adhering to the strict, uncompromising legal constraints set forth by federal authorities. At Canadian Prop Money, we don&apos;t just hit &quot;print&quot; on commercial office equipment. We utilize state-of-the-art, industrial-grade offset presses and specialized, heavyweight textured synthetic paper stocks. Our goal is to replicate the exact dimensions, highly specific color profiles, and overall visual weight of authentic Canadian currency. This careful design is what makes our fake cash range the first choice for Directors of Photography seeking premium <strong className="text-white font-medium">Canadian Prop Money</strong> stacks.
                 </p>
                 <p>
-                  When a lead actor holds a stack of our prop money, they immediately feel the physical difference. Authentic Canadian money has transitioned entirely to polymer—a complex, plastic-like material that possesses unique tactile qualities and very specific visual behaviors. Replicating this without actually using federally restricted polymer necessitates intense material engineering. 
+                  When a lead actor holds a stack of our prop money, they immediately feel the physical difference. Authentic Canadian money has transitioned entirely to polymer—a complex, plastic-like material that possesses unique tactile qualities and very specific visual behaviors. Replicating this without actually using federally restricted polymer necessitates intense material engineering, meaning a generic paper print will instantly fail on camera. 
                 </p>
                 <p>
-                  We have successfully developed a unique synthetic paper blend that provides a similar rigidity, thickness, and acoustic &quot;snap&quot; to genuine polymer. This ensures that the bills sound absolutely authentic when they are riffled, aggressively counted, or dropped sharply onto a table during a critical scene. This physical accuracy is rarely considered by amateur printers, yet it is absolutely critical for actors who rely on tactile feedback to deliver a convincing, immersive performance.
+                  We have successfully developed a unique synthetic paper blend that provides a similar rigidity, thickness, and acoustic &quot;snap&quot; to genuine polymer. This ensures that the bills sound absolutely authentic when they are riffled, aggressively counted, or dropped sharply onto a table during a critical scene. This physical accuracy is rarely considered by amateur printers, yet it is absolutely critical for actors who rely on tactile feedback to deliver a convincing, immersive performance with theater-grade <strong className="text-white font-medium">Prop Money Canada</strong> collections.
+                </p>
+                <p>
+                  By bypassing standard consumer-grade printing and opting for commercial lithographic offset presses, we are able to render ultra-fine line density. Detail is everything under high-definition 4K film resolutions. From micro-text patterns to the intricate portrait hashes representing iconic characters, our systems reproduce the exact aesthetic density that sets our product line far apart from standard &quot;fake money&quot; sellers online.
                 </p>
               </div>
 
@@ -147,7 +150,7 @@ export default function Home() {
       {/* 5. The Science of Color / Lighting */}
       <section className="py-24 bg-black border-y border-white/5 relative overflow-hidden">
          <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent z-0 blur-3xl opacity-30" />
-         
+          
          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <Video className="w-12 h-12 text-primary mx-auto mb-6 opacity-80" />
             <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight mb-8">
@@ -155,7 +158,7 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-base text-gray-400 font-light leading-relaxed text-left md:text-center max-w-3xl mx-auto">
                <p>
-                 One of the most persistent, frustrating issues production designers and directors of photography face is the reflective glare of standard printed money under intense studio lighting arrays. Authentic Canadian currency, manufactured using specialized polymer, has distinct light-scattering properties that are notoriously difficult to emulate. Standard glossy paper, or even typical consumer-grade matte paper, fails instantly on camera. It catches the ambient light directly, creating artificial specular hotspots that immediately break the illusion of reality for the audience.
+                 One of the most persistent, frustrating issues production designers and directors of photography face is the reflective glare of standard printed money under intense studio lighting arrays. Authentic Canadian currency, manufactured using specialized polymer, has distinct light-scattering properties that are notoriously difficult to emulate. Standard glossy paper, or even typical consumer-grade matte paper, fails instantly on camera. It catches the ambient light directly, creating artificial specular hotspots that immediately break the illusion of reality for the audience. This visual defect is a critical obstacle for high-budget films requiring premium quality <strong className="text-white font-medium">Prop Money Canada</strong> sets.
                </p>
                <p>
                  To aggressively combat this, the engineering team at Canadian Prop Money has painstakingly developed a proprietary, multi-layered non-glare finish that actively diffuses harsh lighting. This complex chemical coating is applied during the very final stages of the offset printing process and is specifically formulated to interact seamlessly with professional cinematic lighting setups. 
@@ -164,7 +167,10 @@ export default function Home() {
                  &quot;Whether your Director of Photography is shooting under a blazing 18K HMI on a massive soundstage, utilizing advanced LED volume walls for virtual production, or relying entirely on natural light for a gritty, run-and-gun indie short film—our prop money is engineered to maintain its intended color temperature, depth, and texture without blinding the lens.&quot;
                </p>
                <p>
-                 This microscopic diffusion layer also significantly enhances the micro-detailing of our prints. Intricate geometric patterns, complex line work, and the architectural representations on the faces of the bills remain remarkably crisp and easily resolvable, ensuring that your camera sensor captures the immense depth of the engraving-style printing without being overwhelmed by reflection.
+                 This microscopic diffusion layer also significantly enhances the micro-detailing of our prints. Intricate geometric patterns, complex line work, and the architectural representations on the faces of the bills remain remarkably crisp and easily resolvable, ensuring that your camera sensor captures the immense depth of the engraving-style printing without being overwhelmed by reflection. It is why our <strong className="text-white font-medium">prop money</strong> behaves beautifully under direct key, fill, or backlight options, preventing costly post-production color corrections.
+               </p>
+               <p>
+                 Moreover, our non-glare technology is heavily calibrated for digital camera sensors (RED, ARRI, Sony Venice, and Blackmagic systems). By matching the light refraction index of natural substrate polymers, we guarantee that white balancing remains neutral, avoiding any odd magenta or green color shifts on set.
                </p>
             </div>
          </div>
@@ -222,7 +228,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16 max-w-2xl mx-auto">
              <span className="text-[10px] font-bold uppercase tracking-widest text-primary border border-primary/20 px-3 py-1 bg-primary/5">Catalogue</span>
-             <h2 className="text-4xl lg:text-5xl font-light text-white mb-6 tracking-tight mt-4">Our Currency Collections</h2>
+             <h2 className="text-4xl lg:text-5xl font-light text-white mb-6 tracking-tight mt-4 animate-pulse">Our Currency Collections</h2>
              <p className="text-gray-400 font-light leading-relaxed">Select from our perfectly replicated Canadian currency sets. Available in individual bundled stacks, massive duffel fills, or production-scale facility bundles.</p>
            </div>
            
@@ -250,10 +256,10 @@ export default function Home() {
                        Every single prototype and production design created by Canadian Prop Money is painstakingly analyzed, reviewed by external legal parameters, and continuously updated to ensure complete, unquestionable adherence to <strong className="text-white font-medium">Section 411 of the Criminal Code of Canada</strong>, as well as aligning with the strictest international guidelines for motion picture currency reproduction (including United States Secret Service guidelines for stateside productions importing our products).
                      </p>
                      <p>
-                       Our proprietary designs feature an array of mandatory visual alterations that satisfy all legal requirements while maintaining striking cinematic realism. These modifications include necessary dimensional adjustments, altered historical portraits with subtle artistic modifications, fictionalized issuing authorities, modified serial numbers that flag immediately in banking systems, and distinct, legally mandated &quot;FOR MOTION PICTURE USE ONLY&quot; labeling prominent on both the obverse and reverse sides of every bill.
+                       Our proprietary designs feature an array of mandatory visual alterations that satisfy all legal requirements while maintaining striking cinematic realism. These modifications include necessary dimensional adjustments (all individual notes are scaled to ensure they satisfy sizing rules), altered historical portraits with subtle artistic modifications, fictionalized issuing authorities, modified serial numbers that flag immediately in banking systems, and distinct, legally mandated &quot;FOR MOTION PICTURE USE ONLY&quot; labeling prominent on both the obverse and reverse sides of every bill. This guarantees that your <strong className="text-white font-medium">Prop Money Canada</strong> order is 100% legal to import, host, and utilize on set.
                      </p>
                      <p>
-                       Crucially, all sophisticated security features present on real Canadian polymer notes—such as the complex transparent holographic windows, color-shifting metallic inks, and raised tactile micro-printing—are strictly omitted. We replace these with highly detailed, flat-printed representations that look utterly convincing to the camera but possess zero functional security features when handled by authorities.
+                       Crucially, all sophisticated security features present on real Canadian polymer notes—such as the complex transparent holographic windows, color-shifting metallic inks, and raised tactile micro-printing—are strictly omitted. We replace these with highly detailed, flat-printed representations that look utterly convincing to the camera but possess zero functional security features when handled by authorities. This separation ensures that our products function perfectly as high-fidelity visual decorations while posing absolutely zero threat as passable counter-fit legal tender.
                      </p>
                   </div>
                   <div className="mt-8 bg-white/5 border border-white/10 p-6 flex gap-4 items-start">
@@ -268,7 +274,7 @@ export default function Home() {
                <div className="lg:w-1/2 order-1 lg:order-2 w-full">
                   <div className="grid grid-cols-2 gap-4">
                      <div className="aspect-[3/4] relative rounded overflow-hidden">
-                        <Image src="/images/liko.jpg" alt="Prop money close up" fill className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" referrerPolicy="no-referrer" />
+                        <Image src="/images/liko.jpg" alt="Detail closeup of a Section 411 legal Canadian Prop Money bill" fill className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" referrerPolicy="no-referrer" />
                         <div className="absolute inset-0 border border-white/10"></div>
                      </div>
                      <div className="grid grid-rows-2 gap-4">
@@ -298,7 +304,7 @@ export default function Home() {
               <div className="lg:col-span-1">
                  <h2 className="text-3xl lg:text-4xl font-light text-white tracking-tight mb-6">The Durability Factor: Built For Action.</h2>
                  <p className="text-sm text-gray-400 font-light leading-relaxed mb-8">
-                   Set life is notoriously harsh on props. From being aggressively tossed onto tables during heated dramatic scenes to being forcefully squeezed into duffel bags for getaway sequences, standard commercial paper tears, crumples, flakes, and loses its structural integrity rapidly. This leads to costly continuity errors requiring frequent replacements.
+                   Set life is notoriously harsh on props. From being aggressively tossed onto tables during heated dramatic scenes to being forcefully squeezed into duffel bags for getaway sequences, standard commercial paper tears, crumples, flakes, and loses its structural integrity rapidly. This leads to costly continuity errors requiring frequent replacements. Our premium quality <strong className="text-white font-medium">Prop Money</strong> stocks are engineered physically to resist the rigors of repeating takes.
                  </p>
                  <Link href="/about" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:text-white transition">
                    Read our full story &rarr;
@@ -306,13 +312,13 @@ export default function Home() {
               </div>
               <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
                  <div className="bg-background border border-white/5 p-8">
-                    <Anchor className="w-6 h-6 text-white mb-4" />
-                    <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-3">Tear Resistance</h3>
+                    <Anchor className="w-6 h-6 text-primary mb-4" />
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-3 font-syne mt-4 animate-fade-in">Tear Resistance</h3>
                     <p className="text-xs text-gray-500 font-light leading-relaxed">Our proprietary synthetic-blend stock is explicitly engineered to endure the repetitive, demanding physical rigors of multiple takes without flaking apart.</p>
                  </div>
                  <div className="bg-background border border-white/5 p-8">
-                    <Zap className="w-6 h-6 text-white mb-4" />
-                    <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-3">UV Cured Inks</h3>
+                    <Zap className="w-6 h-6 text-primary mb-4" />
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-3 font-syne mt-4 animate-fade-in">UV Cured Inks</h3>
                     <p className="text-xs text-gray-500 font-light leading-relaxed">The ink is cured using specialized ultra-violet processes, meaning it heavily resists smudging from sweaty hands and doesn&apos;t crack catastrophically when folded abruptly.</p>
                  </div>
               </div>
@@ -332,7 +338,7 @@ export default function Home() {
                  We intimately understand that in the fast-paced, high-stakes world of media production, discretion, reliability, and sheer speed are absolutely paramount. Call times are rigorously fixed, locations are rented by the exhausting hour, and productions simply cannot afford to wait for delayed shipping or unreliable overseas suppliers. 
                </p>
                <p>
-                 To aggressively address this, we employ immediate dispatch protocols. The majority of our standard catalogue items are stocked in massive volumes and are typically processed for shipment within hours of order confirmation. We operate out of a highly secure, restricted-access primary distribution annex located in the Greater Toronto Area (GTA), providing us immediate access to major North American logistical networking hubs.
+                 To aggressively address this, we employ immediate dispatch protocols. The majority of our standard catalogue items are stocked in massive volumes and are typically processed for shipment within hours of order confirmation. We operate out of a highly secure, restricted-access primary distribution annex located in the Greater Toronto Area (GTA), providing us immediate access to major North American logistical networking hubs. This ensures rapid dispatch for visual artists looking to buy <strong className="text-white font-medium">Prop Money Canada</strong> arrays.
                </p>
                <p>
                  Furthermore, our packaging philosophy is centered entirely around the concept of absolute discretion. We recognize that shipping massive quantities of highly realistic prop money requires specialized handling to avoid alarming couriers, border customs agents, or nosy neighbors. All orders are meticulously vacuum-sealed tightly and shipped in rigorously unmarked, standardized, robust cardboard boxing. There are absolutely zero external logos, no vibrant branding, and no indications whatsoever of the high-value-appearing contents inside. 
@@ -373,22 +379,22 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
              <HelpCircle className="w-8 h-8 text-primary mx-auto mb-4" />
-             <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight mb-4">Expanded Operational Database</h2>
-             <p className="text-gray-400 font-light">Deep answers regarding our manufacturing process, legal frameworks, and shipping logistics.</p>
+             <h2 className="text-4xl lg:text-5xl font-light text-white tracking-tight mb-4 select-none">Expanded Operational Database</h2>
+             <p className="text-gray-400 font-light font-sans">Deep answers regarding our manufacturing process, legal frameworks, and shipping logistics.</p>
            </div>
-           <div className="space-y-3">
+           <div className="space-y-4">
               {[
                 {
-                  q: "Is this prop money genuinely legal to possess and use on camera?", 
-                  a: "Yes, absolutely. Our prop money is engineered from the ground up strictly for motion picture, television, theatrical, and photography use. It includes vital, un-removable legal disclaimers like “FOR MOTION PICTURE USE ONLY”, altered artwork and portraits, non-standard dimensional sizing, and completely fictionalized serial numbers in direct compliance with federal laws, specifically Section 411 of the Criminal Code of Canada. It passes all legal scrutiny for production use, however, attempting to use it as real currency to defraud any individual or business is a severe federal crime."
+                  q: "Is this prop money genuinely legal to possess and use on camera in Canada?", 
+                  a: "Yes, absolutely. Our prop money is engineered from the ground up strictly for motion picture, television, theatrical, and photography use. It includes vital, un-removable legal disclaimers like “FOR MOTION PICTURE USE ONLY”, altered artwork and portraits, non-standard dimensional sizing, and completely fictionalized serial numbers in direct compliance with federal laws, specifically Section 411 of the Criminal Code of Canada. It passes all legal scrutiny for production use, however, attempting to use it as real currency to defraud any individual or business is a severe federal crime. It is the premier, safest route to showcase realistic Prop Money Canada collections."
                 },
                 {
-                  q: "How fast is shipping to the United States and International locations?", 
-                  a: "We offer highly competitive expedited shipping networks. For the United States and Canada, standard secure shipping takes 3-5 business days, while our Express logistical option arrives within 24-48 hours to most metropolitan areas. International shipping out to Europe, the UK, or Australia generally requires 5-7 business days. All shipments are highly secured, reliably tracked, and discreetly packaged without any revealing external branding or logos."
+                  q: "How fast is shipping to the United States and Canadian metropolitan hubs?", 
+                  a: "We offer highly competitive expedited shipping networks. For the United States and Canada, standard secure shipping takes 3-5 business days, while our Express logistical option arrives within 24-48 hours to most metropolitan areas. Locations such as Toronto, Vancouver, Montreal, New York, and Los Angeles are serviced directly via express lanes. All shipments are highly secured, reliably tracked, and discreetly packaged without any revealing external branding or logos."
                 },
                 {
                   q: "Do you offer massive bulk production discounts for large film sets or vault setups?", 
-                  a: "Yes, we cater strongly to major productions requiring massive physical volumes of cash for sprawling vault scenes, explosive sequences, or large-scale heist setups. For orders exceeding $5,000, we provide significant custom production quotes and dedicated logistical account management. Please contact our sales team directly via email or our 24/7 WhatsApp line for a detailed, confidential consultation regarding your specific script requirements."
+                  a: "Yes, we cater strongly to major productions requiring massive physical volumes of cash for sprawling vault scenes, explosive sequences, or large-scale heist setups. For orders exceeding $5,000, we provide significant custom production quotes and dedicated logistical account management. Please contact our sales team directly via email or our 24/7 WhatsApp line for a detailed, confidential consultation regarding your specific script requirements. Our Canadian Prop Money setups are optimized to satisfy major set-dressings."
                 },
                 {
                   q: "What payment methods are securely accepted to maintain our privacy?", 
@@ -396,15 +402,27 @@ export default function Home() {
                 },
                 {
                   q: "How realistic is the physical texture compared to modern polymer bills?", 
-                  a: "Modern Canadian currency utilizes a transparent, highly tactile polymer plastic that is federally restricted and illegal to reproduce precisely. To emulate this without breaking the law, we do not use illegal polymer. Instead, we use a specifically engineered, high-grade textured synthetic paper blend. This replicates the physical stiffness, the distinct crackle, and the weight of new bills, while our proprietary matte coating accurately mimics the visual appearance of polymer on-camera, without causing the severe lighting glare that frequently ruins shots."
+                  a: "Modern Canadian currency utilizes a transparent, highly tactile polymer plastic that is federally restricted and illegal to reproduce precisely. To emulate this without breaking the law, we do not use illegal polymer. Instead, we use a specifically engineered, high-grade textured synthetic paper blend. This replicates the physical stiffness, the distinct crackle, and the weight of new bills, while our proprietary matte coating accurately mimics the visual appearance of polymer on-camera, without causing the severe lighting glare that frequently ruins shots. It behaves as authentic Prop Money under close macro angles."
                 },
                 {
                   q: "Are the bills completely double-sided with accurate artwork on the back?", 
                   a: "Yes, all of our prop currency stacks are fully double-sided. Both the obverse (front) and reverse (back) faces feature high-resolution, legally altered artwork mirroring the themes of real currency. This ensures that the bills can be handled dynamically on screen, flipped wildly through the air, scattered across a table, or stuffed carelessly into bags without ever revealing a blank, white back to the viewing audience."
+                },
+                {
+                  q: "What physical alterations guarantee absolute visual compliance in your products?",
+                  a: "To comply fully with counterfeiting laws and Section 411, our bills use modified, hand-drawn character illustrations rather than direct government portrait scans, resized margins and dimension scales, stylized micro-text replacing security seals, non-sequential fictitious serial numbers, and a prominent 'FOR MOTION PICTURE USE ONLY' print on both sides. These multiple safeguards prevent passing and protect film masters."
+                },
+                {
+                  q: "Why are matte-treated coatings critical for capturing Prop Money under modern cinematic sensors?",
+                  a: "Modern 4K, 6K, and 8K digital cinema cameras capture incredible detail, making any plastic-like shine or glossy home prints stand out immediately as fake. Matte coatings scatter incoming light in a wide cone, avoiding artificial glare and hotspots under giant HMIs or virtual studio backdrops. This preserves true color values and keeps scene continuity seamless."
+                },
+                {
+                  q: "How can prop directors artificially handle and distress cash stacks for a distributed appearance?",
+                  a: "Film sets often call for well-worn cash rather than brand new bank vaults. To achieve a distributed look, prop masters can mildly spray bills with watered-down tea to tint the paper, tumble the stacks in a clean dryer with tennis balls to soften textures, or lightly scrape the edges with fine sandpaper. Our synthetic paper is built high-strength, meaning it withstands these distress routines without ripping apart."
                 }
               ].map((faq, idx) => (
-                 <details key={idx} className="group bg-white/5 border border-white/5 rounded-none open:bg-white/10 open:border-white/20 transition-all duration-300">
-                   <summary className="flex items-center justify-between p-6 lg:p-8 cursor-pointer text-sm font-bold uppercase tracking-widest select-none text-white hover:text-primary transition-colors">
+                 <details key={idx} id={`homepage-faq-${idx}`} className="group bg-white/5 border border-white/5 rounded-none open:bg-white/10 open:border-white/20 transition-all duration-300">
+                   <summary className="flex items-center justify-between p-6 lg:p-8 cursor-pointer text-sm font-bold uppercase tracking-widest select-none text-white hover:text-primary transition-colors font-syne">
                      <span className="pr-8">{faq.q}</span>
                      <ChevronDown className="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300" />
                    </summary>

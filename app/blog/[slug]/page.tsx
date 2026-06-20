@@ -20,6 +20,14 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${article.ogTitle || article.title} | Canadian Prop Money`,
     description: article.ogDescription || article.description,
+    keywords: [
+      article.title,
+      "Prop money blog",
+      "Movie prop guide",
+      "Realistic prop money",
+      "Fake money for film",
+      "Cinematic currency"
+    ],
     alternates: {
       canonical: `https://canadianpropmoney.org/blog/${article.slug}`,
     },
