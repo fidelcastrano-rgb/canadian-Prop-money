@@ -20,6 +20,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'cloncardnotes.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'propcounterfeitnotes.com',
         port: '',
         pathname: '/**',
