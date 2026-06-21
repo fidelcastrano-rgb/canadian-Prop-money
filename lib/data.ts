@@ -3,13 +3,13 @@ import { Product } from './store';
 export const PRODUCTS: Product[] = [
   {
     "id": "ca-100-stack",
-    "name": "Buy Counterfeit $100 Canadian Dollars Banknotes",
+    "name": "Buy Counterfeit $100 Canadian Dollar Note",
     "description": "$100 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "New Production",
     "category": "Canadian Dollars",
-    "image": "/upload/product/buy-counterfeit-100-cad-banknotes.webp",
-    "rating": 4.8,
+    "image": "/upload/product/buy-100-canadian-dollar.webp",
+    "rating": 4.42,
     "reviewCount": 56,
     "coaText": "Certified compliant with legal filming guidelines.",
     "packageContents": [
@@ -72,12 +72,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "ca-50-stack",
-    "name": "Buy Counterfeit $50 Canadian Dollars Banknotes",
+    "name": "Buy Counterfeit $50 Canadian Dollar Note",
     "description": "$50 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Canadian Dollars",
-    "image": "/upload/product/buy-counterfeit-50-cad-banknotes.webp",
-    "rating": 4.8,
+    "image": "/upload/product/buy-50-canadian-dollar.webp",
+    "rating": 4.22,
     "reviewCount": 42,
     "coaText": "Certified compliant with legal filming guidelines.",
     "packageContents": [
@@ -140,13 +140,13 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "ca-20-stack",
-    "name": "Buy Counterfeit $20 Canadian Dollars Banknotes",
+    "name": "Buy Counterfeit $20 Canadian Dollar Note",
     "description": "$20 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "Best Seller",
     "category": "Canadian Dollars",
-    "image": "/upload/product/buy-counterfeit-20-cad-banknotes.webp",
-    "rating": 4.8,
+    "image": "/upload/product/buy-20-canadian-dollar.webp",
+    "rating": 4.41,
     "reviewCount": 69,
     "coaText": "Certified compliant with legal filming guidelines.",
     "packageContents": [
@@ -209,12 +209,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "ca-10-stack",
-    "name": "Buy Counterfeit $10 Canadian Dollars Banknotes",
+    "name": "Buy Counterfeit $10 Canadian Dollar Note",
     "description": "$10 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Canadian Dollars",
-    "image": "/upload/product/buy-counterfeit-10-cad-banknotes.webp",
-    "rating": 4.8,
+    "image": "/upload/product/buy-10-canadian-dollar.webp",
+    "rating": 4.18,
     "reviewCount": 47,
     "coaText": "Certified compliant with legal filming guidelines.",
     "packageContents": [
@@ -277,12 +277,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "ca-5-stack",
-    "name": "Buy Counterfeit $5 Canadian Dollars Banknotes",
+    "name": "Buy Counterfeit $5 Canada Dollar Note",
     "description": "$5 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Canadian Dollars",
-    "image": "/upload/product/buy-counterfeit-5-cad-banknotes.webp",
-    "rating": 4.8,
+    "image": "/upload/product/buy-5-canadian-dollar.webp",
+    "rating": 3.49,
     "reviewCount": 63,
     "coaText": "Certified compliant with legal filming guidelines.",
     "packageContents": [
@@ -892,12 +892,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "au-100-stack",
-    "name": "Buy Counterfeit $100 Australian Dollars Banknotes",
+    "name": "Buy Counterfeit $100 Australian Dollar Notes",
     "description": "$100 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "New Production",
     "category": "Australian Dollars",
-    "image": "/upload/product/buy-aud-100-dollars.webp",
+    "image": "/upload/product/buy-100-australian-dollar.webp",
     "rating": 4.8,
     "reviewCount": 31,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -961,11 +961,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "au-50-stack",
-    "name": "Buy Counterfeit $50 Australian Dollars Banknotes",
+    "name": "Buy Counterfeit $50 Australian Dollar Notes",
     "description": "$50 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Australian Dollars",
-    "image": "/upload/product/buy-counterfeit-aud-50-dollar-banknotes.webp",
+    "image": "/upload/product/buy-50-australian-dollar.webp",
     "rating": 4.8,
     "reviewCount": 40,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1029,12 +1029,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "au-20-stack",
-    "name": "Buy Counterfeit $20 Australian Dollars Banknotes",
+    "name": "Buy Counterfeit $20 Australian Dollar Notes",
     "description": "$20 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "Best Seller",
     "category": "Australian Dollars",
-    "image": "/upload/product/buy-aud-20-dollars.webp",
+    "image": "/upload/product/buy-20-australian-dollar.png",
     "rating": 4.8,
     "reviewCount": 55,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1098,11 +1098,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "au-10-stack",
-    "name": "Buy Counterfeit $10 Australian Dollars Banknotes",
+    "name": "Buy Counterfeit $10 Australian banknotes",
     "description": "$10 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Australian Dollars",
-    "image": "/upload/product/buy-aud-10-dollar.webp",
+    "image": "/upload/product/buy-10-australian-dollar.webp",
     "rating": 4.8,
     "reviewCount": 72,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1157,6 +1157,74 @@ export const PRODUCTS: Product[] = [
       {
         "id": "v6",
         "qtyLabel": "Director Platinum Pack (2,500 Notes - $25,000 Face Value)",
+        "price": 10000,
+        "originalPrice": 7500,
+        "savingsLabel": "Save 47%",
+        "billCount": 2500
+      }
+    ]
+  },
+  {
+    "id": "au-5-stack",
+    "name": "Buy Counterfeit $5 Australian Dollar Notes",
+    "description": "$5 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "category": "Australian Dollars",
+    "image": "/upload/product/buy-5-australian-dollar.webp",
+    "rating": 4.09,
+    "reviewCount": 16,
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "variants": [
+      {
+        "id": "v1",
+        "qtyLabel": "Starter Bundle (50 Notes - $250 Face Value)",
+        "price": 200,
+        "originalPrice": 150,
+        "savingsLabel": "Save 33%",
+        "billCount": 50
+      },
+      {
+        "id": "v2",
+        "qtyLabel": "Compact Bundle (100 Notes - $500 Face Value)",
+        "price": 400,
+        "originalPrice": 300,
+        "savingsLabel": "Save 31%",
+        "billCount": 100
+      },
+      {
+        "id": "v3",
+        "qtyLabel": "Premium Bundle (250 Notes - $1,250 Face Value)",
+        "price": 1000,
+        "originalPrice": 750,
+        "savingsLabel": "Save 23%",
+        "billCount": 250
+      },
+      {
+        "id": "v4",
+        "qtyLabel": "Production Bundle (500 Notes - $2,500 Face Value)",
+        "price": 2000,
+        "originalPrice": 1500,
+        "savingsLabel": "Save 33%",
+        "billCount": 500
+      },
+      {
+        "id": "v5",
+        "qtyLabel": "Studio Vault Pack (1,000 Notes - $5,000 Face Value)",
+        "price": 4000,
+        "originalPrice": 3000,
+        "savingsLabel": "Save 38%",
+        "billCount": 1000
+      },
+      {
+        "id": "v6",
+        "qtyLabel": "Director Platinum Pack (2,500 Notes - $12,500 Face Value)",
         "price": 10000,
         "originalPrice": 7500,
         "savingsLabel": "Save 47%",
