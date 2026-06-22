@@ -8,7 +8,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "New Production",
     "category": "Canadian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/100-canada-Note--300x200.jpg",
+    "image": "/upload/product/buy-counterfeit-100-cad-banknotes.webp",
     "rating": 4.42,
     "reviewCount": 56,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -76,7 +76,7 @@ export const PRODUCTS: Product[] = [
     "description": "$50 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Canadian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/50-canada-Note--300x200.jpg",
+    "image": "/upload/product/buy-counterfeit-50-cad-banknotes.webp",
     "rating": 4.22,
     "reviewCount": 42,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -145,7 +145,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "Best Seller",
     "category": "Canadian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/20-canada-Note--300x200.jpg",
+    "image": "/upload/product/buy-counterfeit-20-cad-banknotes.webp",
     "rating": 4.41,
     "reviewCount": 69,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -213,7 +213,7 @@ export const PRODUCTS: Product[] = [
     "description": "$10 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Canadian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/10-canada-Note--300x200.jpg",
+    "image": "/upload/product/buy-counterfeit-10-cad-banknotes.webp",
     "rating": 4.18,
     "reviewCount": 47,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -281,7 +281,7 @@ export const PRODUCTS: Product[] = [
     "description": "$5 Canadian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Canadian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/5-canada-Note-300x200.jpg",
+    "image": "/upload/product/buy-counterfeit-5-cad-banknotes.webp",
     "rating": 3.49,
     "reviewCount": 63,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -897,7 +897,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "New Production",
     "category": "Australian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/100-Australian-Dollar-Notes.webp",
+    "image": "/upload/product/buy-aud-100-dollars.webp",
     "rating": 4.8,
     "reviewCount": 31,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -965,7 +965,7 @@ export const PRODUCTS: Product[] = [
     "description": "$50 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Australian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/50-Australian-Dollar.webp",
+    "image": "/upload/product/buy-counterfeit-aud-50-dollar-banknotes.webp",
     "rating": 4.8,
     "reviewCount": 40,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1034,7 +1034,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "Best Seller",
     "category": "Australian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/20_Australian_Dollar_-removebg-preview.png",
+    "image": "/upload/product/buy-aud-20-dollars.webp",
     "rating": 4.8,
     "reviewCount": 55,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1102,7 +1102,7 @@ export const PRODUCTS: Product[] = [
     "description": "$10 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Australian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/10-Australian-Dollar.webp",
+    "image": "/upload/product/buy-aud-10-dollar.webp",
     "rating": 4.8,
     "reviewCount": 72,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1170,7 +1170,7 @@ export const PRODUCTS: Product[] = [
     "description": "$5 Australian Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Australian Dollars",
-    "image": "https://cloncardnotes.com/wp-content/uploads/2025/09/5-Australian-Dollar.-.webp",
+    "image": "/upload/product/buy-5-australian-dollar.webp",
     "rating": 4.09,
     "reviewCount": 16,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1238,7 +1238,7 @@ export const PRODUCTS: Product[] = [
     "description": "€500 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Euro",
-    "image": "/upload/product/buy-500-euro-notes.webp",
+    "image": "/upload/product/buy-500-euro-bills.webp",
     "rating": 4.8,
     "reviewCount": 64,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1306,7 +1306,7 @@ export const PRODUCTS: Product[] = [
     "description": "€200 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Euro",
-    "image": "/upload/product/buy-200-euro-notes.webp",
+    "image": "/upload/product/buy-eur200-euro-bills.webp",
     "rating": 4.8,
     "reviewCount": 72,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1375,7 +1375,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "New Production",
     "category": "Euro",
-    "image": "/upload/product/buy-100-euro-notes.webp",
+    "image": "/upload/product/buy-eur100-euro-bills.webp",
     "rating": 4.8,
     "reviewCount": 69,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1443,7 +1443,7 @@ export const PRODUCTS: Product[] = [
     "description": "€50 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Euro",
-    "image": "/upload/product/buy-50-euro-notes.webp",
+    "image": "/upload/product/buy-eur50-euro-bills.webp",
     "rating": 4.8,
     "reviewCount": 65,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1512,7 +1512,7 @@ export const PRODUCTS: Product[] = [
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "badge": "Best Seller",
     "category": "Euro",
-    "image": "/upload/product/buy-20-euro-notes.webp",
+    "image": "/upload/product/buy-eur20-euro-bills.webp",
     "rating": 4.8,
     "reviewCount": 39,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1580,7 +1580,7 @@ export const PRODUCTS: Product[] = [
     "description": "€10 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Euro",
-    "image": "/upload/product/buy-10-euro-notes.webp",
+    "image": "/upload/product/buy-eur10-euro-bills.webp",
     "rating": 4.8,
     "reviewCount": 66,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1648,7 +1648,7 @@ export const PRODUCTS: Product[] = [
     "description": "€5 Euro with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
     "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
     "category": "Euro",
-    "image": "/upload/product/buy-5-euro-notes.webp",
+    "image": "/upload/product/buy-eur5-euro-bills.webp",
     "rating": 4.8,
     "reviewCount": 37,
     "coaText": "Certified compliant with legal filming guidelines.",
@@ -1709,5 +1709,186 @@ export const PRODUCTS: Product[] = [
         "billCount": 2500
       }
     ]
+  },
+  {
+    "id": "us-50-stack-new",
+    "name": "Buy Counterfeit USD $50 Banknotes",
+    "description": "$50 US Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "category": "US Dollars",
+    "image": "/upload/product/buy-50-us-dollar-bills.webp",
+    "rating": 4.5,
+    "reviewCount": 35,
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "variants": [
+      {
+        "id": "us-50-v1",
+        "qtyLabel": "Starter Bundle (50 Notes - $2,500 Face Value)",
+        "price": 500,
+        "originalPrice": 400,
+        "savingsLabel": "Save 20%",
+        "billCount": 50
+      },
+      {
+        "id": "us-50-v2",
+        "qtyLabel": "Production Bundle (500 Notes - $25,000 Face Value)",
+        "price": 5000,
+        "originalPrice": 4000,
+        "savingsLabel": "Save 20%",
+        "billCount": 500
+      }
+    ]
+  },
+  {
+    "id": "us-100-stack-new",
+    "name": "Buy Counterfeit USD $100 Banknotes",
+    "description": "$100 US Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "category": "US Dollars",
+    "image": "/upload/product/buy-100-us-dollar-bills.webp",
+    "rating": 4.6,
+    "reviewCount": 40,
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "variants": [
+      {
+        "id": "us-100-v1",
+        "qtyLabel": "Starter Bundle (50 Notes - $5,000 Face Value)",
+        "price": 500,
+        "originalPrice": 400,
+        "savingsLabel": "Save 20%",
+        "billCount": 50
+      },
+      {
+        "id": "us-100-v2",
+        "qtyLabel": "Production Bundle (500 Notes - $50,000 Face Value)",
+        "price": 5000,
+        "originalPrice": 4000,
+        "savingsLabel": "Save 20%",
+        "billCount": 500
+      }
+    ]
+  },
+  {
+    "id": "us-20-stack-new",
+    "name": "Buy Counterfeit USD $20 Banknotes",
+    "description": "$20 US Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "category": "US Dollars",
+    "image": "/upload/product/buy-20-us-dollar-bills.webp",
+    "rating": 4.4,
+    "reviewCount": 30,
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "variants": [
+      {
+        "id": "us-20-v1",
+        "qtyLabel": "Starter Bundle (50 Notes - $1,000 Face Value)",
+        "price": 500,
+        "originalPrice": 400,
+        "savingsLabel": "Save 20%",
+        "billCount": 50
+      },
+      {
+        "id": "us-20-v2",
+        "qtyLabel": "Production Bundle (500 Notes - $10,000 Face Value)",
+        "price": 5000,
+        "originalPrice": 4000,
+        "savingsLabel": "Save 20%",
+        "billCount": 500
+      }
+    ]
+  },
+  {
+    "id": "us-10-stack-new",
+    "name": "Buy Counterfeit USD $10 Banknotes",
+    "description": "$10 US Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "category": "US Dollars",
+    "image": "/upload/product/buy-10-us-dollar-bills.webp",
+    "rating": 4.3,
+    "reviewCount": 25,
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "variants": [
+      {
+        "id": "us-10-v1",
+        "qtyLabel": "Starter Bundle (50 Notes - $500 Face Value)",
+        "price": 500,
+        "originalPrice": 400,
+        "savingsLabel": "Save 20%",
+        "billCount": 50
+      },
+      {
+        "id": "us-10-v2",
+        "qtyLabel": "Production Bundle (500 Notes - $5,000 Face Value)",
+        "price": 5000,
+        "originalPrice": 4000,
+        "savingsLabel": "Save 20%",
+        "billCount": 500
+      }
+    ]
+  },
+  {
+    "id": "us-5-stack-new",
+    "name": "Buy Counterfeit USD $5 Banknotes",
+    "description": "$5 US Dollars with exquisite anti-reflective matte coating, perfect for high-definition cinematic capture.",
+    "longDescription": "Cinema-grade realistic currency reproduction certified for television and motion picture use.",
+    "category": "US Dollars",
+    "image": "/upload/product/buy-5-us-dollar-bills.webp",
+    "rating": 4.2,
+    "reviewCount": 20,
+    "coaText": "Certified compliant with legal filming guidelines.",
+    "packageContents": [
+      "100x high-fidelity replica bills matching regulatory dimensions.",
+      "Heavy-duty secure strap branded with production-grade style bands.",
+      "Laminated Certificate of Authenticity signed by visual compliance officers.",
+      "Anti-humidity film protector sleeve for secure storage."
+    ],
+    "storageInstructions": "Store horizontally inside secure lockers. Keep away from extreme heat. Do not use iron or heat devices directly.",
+    "variants": [
+      {
+        "id": "us-5-v1",
+        "qtyLabel": "Starter Bundle (50 Notes - $250 Face Value)",
+        "price": 500,
+        "originalPrice": 400,
+        "savingsLabel": "Save 20%",
+        "billCount": 50
+      },
+      {
+        "id": "us-5-v2",
+        "qtyLabel": "Production Bundle (500 Notes - $2,500 Face Value)",
+        "price": 5000,
+        "originalPrice": 4000,
+        "savingsLabel": "Save 20%",
+        "billCount": 500
+      }
+    ]
   }
 ];
+
